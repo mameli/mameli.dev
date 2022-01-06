@@ -1,8 +1,10 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="flex flex-col justify-center h-10">
       <hr />
-      <span>Created with love by Mameli</span>
+      <span className="m-auto">
+        Created with ♥ by Mameli
+      </span>
     </footer>
   )
 }

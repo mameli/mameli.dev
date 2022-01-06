@@ -12,17 +12,17 @@ type Props = {
 
 const Layout = ({ children, title = 'Mameli.dev' }: Props) => {
   return (
-    <div>
+    <div className="dark:bg-gray-800 bg-white flex flex-col h-screen justify-between">
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <header>
-        <Navbar/>
+        <Navbar />
       </header>
-      {children}
-      <Footer/>
+      <main className="flex flex-col justify-center px-8 bg-white dark:bg-gray-800">{children}</main>
+      <Footer />
     </div>
   )
 }
