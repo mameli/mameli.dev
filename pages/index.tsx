@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 
 const IndexPage = () => (
   <Layout title="Home">
-    <h1 className="text-8xl m-auto text-gray-800 dark:text-white">Hello 👋</h1>
+    <h1 className="text-7xl m-auto text-gray-800 dark:text-white">Hello 👋</h1>
   </Layout>
 )
 

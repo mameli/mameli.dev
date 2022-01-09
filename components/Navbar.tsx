@@ -127,7 +127,7 @@ const Navbar = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    className="w-7 h-7 dark:text-gray-200 text-cyan-500 dark:text-yellow-500"
+                    className="w-7 h-7 text-cyan-500 dark:text-yellow-500"
                   >
                     {theme === 'dark' ? (
                       <path
