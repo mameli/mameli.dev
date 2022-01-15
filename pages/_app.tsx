@@ -4,10 +4,9 @@ import { ThemeProvider } from 'next-themes'
 
 import '../styles/index.css'
 
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider enableSystem={false} defaultTheme="dark" attribute="class" disableTransitionOnChange >
+    <ThemeProvider enableSystem={false} defaultTheme="dark" attribute="class">
       <Component {...pageProps} />
     </ThemeProvider>
   )

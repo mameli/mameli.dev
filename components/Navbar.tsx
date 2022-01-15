@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useTheme } from 'next-themes'
 
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const Navbar = ({layoutNavbar}) => {
+const Navbar = ({ layoutNavbar }) => {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -27,25 +28,23 @@ const Navbar = ({layoutNavbar}) => {
             <div className="relative flex items-center justify-between h-14 ">
               <div className="flex-1 flex justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-auto flex items-center">
-                  <a
-                    key="logo"
-                    href="/"
-                    className="text-2xl rounded-md font-medium"
-                  >
-                    Mameli.Dev
-                  </a>
+                  <Link href="/">
+                    <a key="logo" className="text-2xl rounded-md font-medium">
+                      Mameli.Dev
+                    </a>
+                  </Link>
                 </div>
                 <div className="hidden sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="hover:underline decoration-wavy underline-offset-8 decoration-green-500 p-2 rounded-xl text-lg font-medium"
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
+                      <Link key={item.name} href={item.href}>
+                        <a
+                          className="hover:underline decoration-wavy underline-offset-8 decoration-green-500 p-2 rounded-xl text-lg font-medium"
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                     <button
                       aria-label="Toggle Dark Mode"

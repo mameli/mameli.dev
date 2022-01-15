@@ -19,9 +19,11 @@ const Layout = ({ children, title = 'Mameli.dev' }: Props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <header>
-        <Navbar layoutNavbar={"max-w-3xl mx-auto px-2 sm:px-6 lg:px-8"}/>
+        <Navbar layoutNavbar={'max-w-3xl mx-auto px-2 sm:px-6 lg:px-8'} />
       </header>
-      <main className="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pb-2 bg-white dark:bg-gray-800">{children}</main>
+      <main className="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pb-2 bg-white dark:bg-gray-800">
+        {children}
+      </main>
       <Footer />
     </div>
   )
