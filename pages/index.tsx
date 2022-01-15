@@ -13,11 +13,11 @@ const IndexPage = () => (
         </h1>
       </div>
       <div className="sm:hidden h-10"/>
-      <div className="mx-auto w-1/2 sm:w-3/12 items-center">
+      <div className="flex mx-auto w-1/2 sm:w-3/12 rounded-full shadow-2xl shadow-blue-700 dark:shadow-green-500/50 ">
         <Image
           src={profilePic}
           alt="Picture of the author"
-          className="rounded-full object-fill h-200 w-200 items-center"
+          className="rounded-full"
         />
       </div>
     </div>
