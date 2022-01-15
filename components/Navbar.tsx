@@ -1,13 +1,10 @@
-import React, { ReactNode, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import Link from 'next/link'
-import Head from 'next/head'
 
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const Navbar = () => {
+const Navbar = ({layoutNavbar}) => {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -26,10 +23,10 @@ const Navbar = () => {
     <Disclosure as="nav" className="dark:bg-gray-800 bg-white">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className={layoutNavbar}>
             <div className="relative flex items-center justify-between h-14 ">
               <div className="flex-1 flex justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-auto flex items-center ml-4">
+                <div className="flex-auto flex items-center">
                   <a
                     key="logo"
                     href="/"

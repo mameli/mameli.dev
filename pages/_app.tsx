@@ -7,7 +7,7 @@ import '../styles/index.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider enableSystem={false} defaultTheme="dark" attribute="class" disableTransitionOnChange>
       <Component {...pageProps} />
     </ThemeProvider>
   )
