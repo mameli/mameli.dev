@@ -20,7 +20,7 @@ const Navbar = ({layoutNavbar}) => {
   }
 
   return (
-    <Disclosure as="nav" className="dark:bg-gray-800 bg-white">
+    <Disclosure as="nav" className="dark:bg-gray-800 bg-white pb-2">
       {({ open }) => (
         <>
           <div className={layoutNavbar}>
