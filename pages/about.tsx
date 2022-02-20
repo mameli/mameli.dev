@@ -58,17 +58,27 @@ const AboutPage = () => (
         Computer Science in the University of Florence. I have a master deegree
         in Data Science.
         <br />
-        I&apos;m passionate about Machine Learning, Data Engineering and Web
+        I like about Machine Learning, Data Engineering and Web
         Development.
         <br />
         All my personal projects can be found in my{' '}
         <a
           className="text-cyan-500 hover:underline underline-offset-2"
           href="https://github.com/mameli"
-        >Github</a>{' '}
+        >
+          Github
+        </a>{' '}
         page.
-        <br/>
+        <br />
         I also like listening to music, photography, cinema and videogames.
+        <br />I wanted to build this site to create something useful for me and
+        for anyone who&apos;s interested in software development. In the{' '}
+        <Link key="hobbies_page" href="/hobbies">
+          <a className="text-cyan-500 hover:underline underline-offset-2">
+            Hobbies&apos;s page
+          </a>
+        </Link>{' '}
+        I&apos;ll keep the other things that I&apos;m passionate about.
       </p>
     </div>
   </Layout>
