@@ -9,7 +9,7 @@ const IndexPage = () => (
       <div className="flex mx-auto sm:w-9/12 sm:text-left text-center">
         <h1 className="text-5xl text-gray-800 dark:text-white ">
           Hi 👋
-          <br /> I&apos;m Filippo Mameli, <br />a Software Engineer
+          <br /> I&apos;m Filippo Mameli, <br />a Data Engineer
         </h1>
       </div>
       <div className="sm:hidden h-10" />
