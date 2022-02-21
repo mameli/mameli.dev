@@ -55,10 +55,10 @@ const AboutPage = () => (
       <p>
         {' '}
         Hi! I&apos;m Filippo Mameli and I&apos;m a Data Engineer. I studied
-        Computer Science in the University of Florence. I have a master deegree
+        Computer Science in the University of Florence. I have a master degree
         in Data Science.
         <br />
-        I like about Machine Learning, Data Engineering and Web
+        I like Machine Learning, Data Engineering and Web
         Development.
         <br />
         All my personal projects can be found in my{' '}
