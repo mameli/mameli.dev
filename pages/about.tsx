@@ -82,7 +82,7 @@ const AboutPage = () => (
         If you are hiring, you can get my cv{' '}
         <a
           className="text-cyan-500 hover:underline underline-offset-2"
-          href="https://github.com/mameli/mameli.dev/blob/main/cv/Filippo_Mameli_EN_Resume.pdf"
+          href="https://github.com/mameli/mameli.dev/raw/main/cv/Filippo_Mameli_EN_Resume.pdf"
         >
           here
         </a>
