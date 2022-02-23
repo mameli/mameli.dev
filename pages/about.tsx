@@ -58,8 +58,7 @@ const AboutPage = () => (
         Computer Science in the University of Florence. I have a master degree
         in Data Science.
         <br />
-        I like Machine Learning, Data Engineering and Web
-        Development.
+        I like Machine Learning, Data Engineering and Web Development.
         <br />
         All my personal projects can be found in my{' '}
         <a
@@ -78,7 +77,16 @@ const AboutPage = () => (
             Hobbies&apos;s page
           </a>
         </Link>{' '}
-        I&apos;ll keep the other things that I&apos;m passionate about.
+        I&apos;ll keep the other things that I&apos;m passionate about. 
+        <br />
+        If you are hiring, you can get my cv{' '}
+        <a
+          className="text-cyan-500 hover:underline underline-offset-2"
+          href="https://github.com/mameli/mameli.dev/blob/main/cv/Filippo_Mameli_EN_Resume.pdf"
+        >
+          here
+        </a>
+        .
       </p>
     </div>
   </Layout>
