@@ -54,7 +54,7 @@ const AboutPage = () => (
 
       <p>
         {' '}
-        Hi! I&apos;m Filippo Mameli and I&apos;m a Data Engineer. I studied
+        Hi! I&apos;m Filippo Mameli and I&apos;m a Ai Engineer. I studied
         Computer Science in the University of Florence. I have a master degree
         in Data Science.
         <br />
@@ -70,14 +70,6 @@ const AboutPage = () => (
         page.
         <br />
         I also like listening to music, photography, cinema and videogames.
-        <br />I wanted to build this site to create something useful for me and
-        for anyone who&apos;s interested in software development. In the{' '}
-        <Link key="hobbies_page" href="/hobbies">
-          <a className="text-cyan-500 hover:underline underline-offset-2">
-            Hobbies&apos;s page
-          </a>
-        </Link>{' '}
-        I&apos;ll keep the other things that I&apos;m passionate about. 
         <br />
         If you are hiring, you can get my cv{' '}
         <a
