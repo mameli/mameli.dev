@@ -13,9 +13,10 @@ const Navbar = ({ layoutNavbar }) => {
 
   const navigation = [
     { name: 'Home', href: '/', current: false },
-    { name: 'Resources', href: '/resources', current: false },
+    { name: 'Projects', href: '/projects', current: false },
+    // { name: 'Resources', href: '/resources', current: false },
     // { name: 'Setup', href: '/setup', current: false },
-    { name: 'Hobbies', href: '/hobbies', current: false },
+    // { name: 'Hobbies', href: '/hobbies', current: false },
     { name: 'About', href: '/about', current: false },
   ]
 
