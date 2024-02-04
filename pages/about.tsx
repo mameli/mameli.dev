@@ -5,7 +5,7 @@ const AboutPage = () => (
   <Layout title="About">
     <div>
       <div>
-        <h1 className="text-5xl text-gray-800 dark:text-white">About Me</h1>
+        <h1 className="text-4xl text-gray-800 dark:text-white">About Me</h1>
       </div>
       <div className="py-3"></div>
       <h2 className="text-3xl text-gray-800 dark:text-white">Links</h2>
