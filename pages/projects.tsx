@@ -12,7 +12,7 @@ const HobbiesPage = () => (
       <ul className="list-disc">
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/make_it_short"
           >
             Make it short
@@ -23,7 +23,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/Artifact_Removal_GAN"
           >
             Artifact Removal GAN
@@ -34,7 +34,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/Test_batch_norm_paper"
           >
             How does batch normalization help optimization?
@@ -45,7 +45,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/k-means-hadoop"
           >
             K-means hadoop
@@ -56,7 +56,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/crypto-data-analysis"
           >
             Crypto data analysis
@@ -67,7 +67,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://www.dbiz.it/VirtualHR"
           >
             Virtual HR
