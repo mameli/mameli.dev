@@ -62,7 +62,7 @@ const HobbiesPage = () => (
             Crypto data analysis
           </a>
           <span className="text-lg text-gray-800 dark:text-white">
-            : An overkill implementation of a kafka-spark crypto's trades analyser
+            : An overkill implementation of a kafka-spark crypto&apos;s trades analyser
           </span>
         </li>
         <li>
