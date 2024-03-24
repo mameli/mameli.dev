@@ -13,6 +13,17 @@ const HobbiesPage = () => (
         <li>
           <a
             className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            href="https://github.com/mameli/sbobinator"
+          >
+            Sbobinator
+          </a>
+          <span className="text-lg text-gray-800 dark:text-white">
+            : Web app for transcripting audio files with OpenAI
+          </span>
+        </li>
+        <li>
+          <a
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/make_it_short"
           >
             Make it short
@@ -62,7 +73,8 @@ const HobbiesPage = () => (
             Crypto data analysis
           </a>
           <span className="text-lg text-gray-800 dark:text-white">
-            : An overkill implementation of a kafka-spark crypto&apos;s trades analyser
+            : An overkill implementation of a kafka-spark crypto&apos;s trades
+            analyser
           </span>
         </li>
         <li>
