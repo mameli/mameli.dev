@@ -13,6 +13,17 @@ const HobbiesPage = () => (
         <li>
           <a
             className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            href="https://mameli.hashnode.dev/elixir-powered-macbook-sensor-monitoring-a-hands-on-guide"
+          >
+            Macbook Sensor Monitoring
+          </a>
+          <span className="text-lg text-gray-800 dark:text-white">
+            : Elixir-Powered sensor monitoring
+          </span>
+        </li>
+        <li>
+          <a
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/sbobinator"
           >
             Sbobinator
