@@ -102,7 +102,7 @@ const HobbiesPage = () => (
         <li>
           <a
             className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
-            href="https://www.dbiz.it/VirtualHR"
+            href="https://premium.rewind.it/virtual-hr"
           >
             Virtual HR
           </a>
