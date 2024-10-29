@@ -54,7 +54,7 @@ const AboutPage = () => (
 
       <p>
         {' '}
-        Hi! I&apos;m Filippo Mameli and I&apos;m a Ai Engineer. I studied Computer Science at the University of Florence and have a Master in Data Science
+        Hi! I&apos;m Filippo Mameli and I&apos;m a Data Engineer. I studied Computer Science at the University of Florence and have a Master in Data Science
         <br />
         I like Machine Learning, Data Engineering and Web Development.
         <br />
