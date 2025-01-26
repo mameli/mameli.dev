@@ -13,6 +13,17 @@ const HobbiesPage = () => (
         <li>
           <a
             className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            href="https://mameli.hashnode.dev/diy-letterboxd-wrapped-analyzing-your-movie-data-for-free"
+          >
+            DIY Letterboxd Wrapped
+          </a>
+          <span className="text-lg text-gray-800 dark:text-white">
+            : Analyzing Your Movie Data for Free
+          </span>
+        </li>
+        <li>
+          <a
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
             href="https://mameli.hashnode.dev/riding-the-rust-wave-a-journey-from-pandas-to-polars-in-data-analysis"
           >
             Transitioning from Pandas to Polars
