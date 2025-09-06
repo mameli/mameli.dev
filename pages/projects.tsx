@@ -12,7 +12,7 @@ const HobbiesPage = () => (
       <ul className="list-disc">
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://mameli.hashnode.dev/prompt-engineering-lessons-learned-from-googles-guide"
           >
             Prompt Engineering Lessons
@@ -23,7 +23,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://mameli.hashnode.dev/diy-letterboxd-wrapped-analyzing-your-movie-data-for-free"
           >
             DIY Letterboxd Wrapped
@@ -34,7 +34,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://mameli.hashnode.dev/riding-the-rust-wave-a-journey-from-pandas-to-polars-in-data-analysis"
           >
             Transitioning from Pandas to Polars
@@ -45,7 +45,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://mameli.hashnode.dev/elixir-powered-macbook-sensor-monitoring-a-hands-on-guide"
           >
             Macbook Sensor Monitoring
@@ -56,7 +56,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/sbobinator"
           >
             Sbobinator
@@ -67,7 +67,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/make_it_short"
           >
             Make it short
@@ -78,7 +78,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/Artifact_Removal_GAN"
           >
             Artifact Removal GAN
@@ -89,7 +89,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/Test_batch_norm_paper"
           >
             How does batch normalization help optimization?
@@ -100,7 +100,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/k-means-hadoop"
           >
             K-means hadoop
@@ -111,7 +111,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://github.com/mameli/crypto-data-analysis"
           >
             Crypto data analysis
@@ -123,7 +123,7 @@ const HobbiesPage = () => (
         </li>
         <li>
           <a
-            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-2 decoration-green-500 dark:text-white"
+            className="text-2xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-8 decoration-green-500 dark:text-white"
             href="https://premium.rewind.it/virtual-hr"
           >
             Virtual HR
