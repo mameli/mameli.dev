@@ -1,47 +1,81 @@
-# TypeScript Next.js example
+# mameli.dev
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Personal website and portfolio for Filippo Mameli, a Data Engineer.
 
-## Preview
+## About
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+This is my personal website built with modern web technologies to showcase my work, projects, and professional experience. The site includes information about my background, current projects, hobbies, and resources I find valuable.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+## Tech Stack
 
-## Deploy your own
+- **Framework**: Next.js 15 with TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Headless UI with Heroicons
+- **Theme**: Dark/Light mode support with next-themes
+- **Deployment**: Optimized for Vercel
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+- Responsive design that works on all devices
+- Dark and light theme support
+- Fast loading with Next.js optimization
+- TypeScript for type safety
+- Modern UI components with Headless UI
 
-## How to use it?
+## Pages
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- **Home**: Introduction and overview
+- **About**: Professional background and experience
+- **Projects**: Portfolio of work and side projects
+- **Hobbies**: Personal interests and activities
+- **Resources**: Useful tools, articles, and references
+- **Setup**: Development environment and tools
 
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npx create-next-app --example with-typescript with-typescript-app
+git clone https://github.com/yourusername/mameli.dev.git
+cd mameli.dev
+```
+
+2. Install dependencies:
+```bash
+npm install
 # or
-yarn create next-app --example with-typescript with-typescript-app
+yarn install
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
+### Available Scripts
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+## Deployment
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+The site is optimized for deployment on Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/yourusername/mameli.dev)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
