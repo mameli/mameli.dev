@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 
 import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const Navbar = ({ layoutNavbar }) => {
   const { theme, setTheme } = useTheme()
@@ -32,22 +32,20 @@ const Navbar = ({ layoutNavbar }) => {
             <div className="relative flex items-center justify-between h-14 ">
               <div className="flex-1 flex justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-auto flex items-center">
-                  <Link href="/">
-                    <a key="logo" className="text-2xl rounded-md font-medium">
-                      Mameli.Dev
-                    </a>
+                  <Link href="/" className="text-2xl rounded-md font-medium">
+                    Mameli.Dev
                   </Link>
                 </div>
                 <div className="hidden sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <Link key={item.name} href={item.href}>
-                        <a
-                          className="hover:underline decoration-wavy underline-offset-8 decoration-green-500 p-2 rounded-xl text-lg font-medium"
-                          aria-current={item.current ? 'page' : undefined}
-                        >
-                          {item.name}
-                        </a>
+                      <Link 
+                        key={item.name} 
+                        href={item.href}
+                        className="hover:underline decoration-wavy underline-offset-8 decoration-green-500 p-2 rounded-xl text-lg font-medium"
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
                       </Link>
                     ))}
                     <button
@@ -91,9 +89,9 @@ const Navbar = ({ layoutNavbar }) => {
                 <Disclosure.Button className="inline-flex items-center justify-center rounded hover:ring-2 ring-gray-900 dark:ring-gray-300 ring-offset-4">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-7 w-7" aria-hidden="true" />
+                    <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
                   ) : (
-                    <MenuIcon className="block h-7 w-7" aria-hidden="true" />
+                    <Bars3Icon className="block h-7 w-7" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>

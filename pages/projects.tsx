@@ -18,7 +18,7 @@ const HobbiesPage = () => (
             Prompt Engineering Lessons
           </a>
           <span className="text-lg text-gray-800 dark:text-white">
-            : Lessons Learned from Google's Guide
+            : Lessons Learned from Google&apos;s Guide
           </span>
         </li>
         <li>
