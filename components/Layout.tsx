@@ -1,5 +1,6 @@
 import React, { ReactNode, useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Link from 'next/link'
@@ -25,6 +26,7 @@ const Layout = ({ children, title = 'Mameli.dev' }: Props) => {
         {children}
       </main>
       <Footer />
+      <SpeedInsights />
     </div>
   )
 }
