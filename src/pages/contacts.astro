@@ -1,122 +1,52 @@
 <!--
-  Migrated about.tsx to Astro's component structure.
-  Replaces Next.js-specific features with Astro equivalents.
+  Enhanced contacts page with centered layout and updated content.
 -->
 ---
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About">
-  <div>
-    <div>
-      <h1 class="text-4xl text-gray-800 dark:text-white font-medium">About Me</h1>
-    </div>
-    <div class="py-3"></div>
-    <h2 class="text-3xl text-gray-800 dark:text-white font-medium">Links</h2>
-    <div class="py-1"></div>
-    <ul>
-      <li>
-        Github: 
+<Layout title="Contact Me">
+  <div class="flex flex-col items-center justify-center min-h-screen">
+    <div class="text-center">
+      <h1 class="text-4xl text-gray-800 dark:text-white font-medium mb-8">Contact Me</h1>
+      <div class="flex flex-wrap justify-center gap-6 text-lg text-gray-800 dark:text-white">
         <a
-          class="text-cyan-500 hover:underline underline-offset-2"
+          class="hover:underline underline-offset-2"
           href="https://github.com/mameli"
         >
-          @mameli
+          GitHub
         </a>
-      </li>
-      <li>
-        Linkedin: 
         <a
-          class="text-cyan-500 hover:underline underline-offset-2"
+          class="hover:underline underline-offset-2"
           href="https://www.linkedin.com/in/filippo-mameli-68006067/"
         >
-          @filippo-mameli
+          LinkedIn
         </a>
-      </li>
-      <li>
-        Instagram: 
         <a
-          class="text-cyan-500 hover:underline underline-offset-2"
+          class="hover:underline underline-offset-2"
           href="https://www.instagram.com/therealmameli/"
         >
-          @therealmameli
+          Instagram
         </a>
-      </li>
-      <li>
-        Email: 
         <a
-          class="text-cyan-500 hover:underline underline-offset-2"
+          class="hover:underline underline-offset-2"
+          href="/"
+        >
+          Blog
+        </a>
+        <a
+          class="hover:underline underline-offset-2"
+          href="/cv/Filippo_Mameli_EN_Resume.pdf"
+        >
+          Resume
+        </a>
+        <a
+          class="hover:underline underline-offset-2"
           href="mailto:filippomameli@outlook.com"
         >
-          filippomameli@outlook.com
+          Email
         </a>
-      </li>
-    </ul>
-    <div class="py-3"></div>
-    <h2 class="text-3xl text-gray-800 dark:text-white font-medium">Bio</h2>
-    <div class="py-1"></div>
-
-    <p>
-      Hi! I'm Filippo Mameli and I'm a Data Engineer. I work at
-      <a
-        class="text-cyan-500 hover:underline underline-offset-2"
-        href="https://www.agilelab.it"
-      >
-        AgileLab
-      </a>. I studied Computer Science at the University of Florence and have a Master in Data Science
-      <br />
-      I like Machine Learning, Data Engineering and Web Development.
-      <br />
-      Welcome to my
-      <a
-        class="text-cyan-500 hover:underline underline-offset-2"
-        href="/blog"
-      >
-        blog
-      </a>. You can find all my
-      <a
-        class="text-cyan-500 hover:underline underline-offset-2"
-        href="/blog"
-      >
-        articles
-      </a> and personal projects on my
-      <a
-        class="text-cyan-500 hover:underline underline-offset-2"
-        href="https://github.com/mameli"
-      >
-        coding
-      </a>
-      page.
-      <br />
-      I enjoy listening to
-      <a
-        class="text-cyan-500 hover:underline underline-offset-2"
-        href="https://www.last.fm/user/therealmameli"
-      >
-        music
-      </a>,
-      <a
-        class="text-cyan-500 hover:underline underline-offset-2"
-        href="https://www.instagram.com/therealmameli/"
-      >
-        photography
-      </a>, cinema, and video games.
-      <br />
-      If you are hiring, you can find my cv
-      <a
-        class="text-cyan-500 hover:underline underline-offset-2"
-        href="https://github.com/mameli/mameli.dev/raw/main/cv/Filippo_Mameli_EN_Resume.pdf"
-      >
-        here
-      </a>.
-      Feel free to
-      <a
-        class="text-cyan-500 hover:underline underline-offset-2"
-        href="/contacts"
-      >
-        connect
-      </a>
-      with me.
-    </p>
+      </div>
+    </div>
   </div>
 </Layout>
