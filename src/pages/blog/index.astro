@@ -18,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
           posts.map((post) => (
             <li>
               <a
-                class="text-xl font-bold text-gray-800 hover:underline decoration-wavy underline-offset-3 decoration-green-500 dark:text-white"
+                class="text-xl font-bold text-gray-800 hover:underline underline-offset-3  dark:text-white"
                 href={`/blog/${post.id}/`}
               >
                 {post.data.title}
