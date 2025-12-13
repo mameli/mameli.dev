@@ -1,28 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import profilePic from '../assets/profile.png'
+---
+
 <!--
   Migrated index.tsx to Astro's component structure.
   Replaces Next.js-specific features with Astro equivalents.
 -->
----
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import profilePic from '../assets/profile.png';
----
-
 <Layout title="Home">
-  <div class="flex flex-col-reverse sm:flex-row mx-auto items-start">
-    <div class="flex mx-auto sm:w-9/12 sm:text-left text-center">
-      <h1 class="text-5xl text-gray-800 dark:text-white">
-        Hi 👋
-        <br /> I'm Filippo Mameli, <br />a Data Engineer
+  <div
+    class="flex flex-col sm:flex-row items-center justify-center min-h-screen"
+  >
+    <div class="text-center sm:text-left sm:w-2/4">
+      <h1 class="text-xl font-bold text-gray-800 dark:text-white">
+        Mameli.Dev
+      </h1>
+      <div class="py-1"></div>
+      <h1 class="text-xl text-gray-800 dark:text-white">
+        I'm Filippo Mameli and this is my
+        <a class="font-medium underline underline-offset-3" href="/blog">
+          blog
+        </a>
+        <div class="py-1"></div>
+        I work at
+        <a
+          class="font-medium underline underline-offset-3"
+          href="https://www.agilelab.it"
+        >
+          AgileLab
+        </a> as a Data engineer.
+        <div class="py-1"></div>
+        I'm curious technology aficionado. I enjoy
+        sharing knowledge or interesting anecdotes by writing
+        <a class="font-medium underline underline-offset-3" href="/blog">
+          articles
+        </a> and
+        <a
+          class="font-medium underline underline-offset-3"
+          href="https://github.com/mameli"
+        >
+          coding
+        </a>
+        <div class="py-1"></div>
+        I'm also really into
+        <a
+          class="font-medium underline underline-offset-3"
+          href="https://www.last.fm/user/therealmameli"
+        >
+          music
+        </a> and
+        <a
+          class="font-medium underline underline-offset-3"
+          href="https://www.instagram.com/therealmameli/"
+        >
+          photography
+        </a>
+        <div class="py-1"></div>
+        Here are details how to
+        <a class="font-medium underline underline-offset-3" href="/contacts">
+          connect
+        </a> with me.
       </h1>
     </div>
-    <div class="sm:hidden h-10" />
-    <div class="flex mx-auto w-1/2 sm:w-3/12 rounded-full shadow-2xl shadow-blue-700 dark:shadow-green-500/50">
-      <Image
-        src={profilePic}
-        alt="Picture of the author"
-        class="rounded-full"
-      />
+    <div class="sm:w-1/4 flex justify-center sm:justify-end mt-8 sm:mt-0">
+      <div
+        class="w-32 h-32 rounded-full shadow-2xl shadow-blue-700 dark:shadow-green-500/50"
+      >
+        <Image
+          src={profilePic}
+          alt="Picture of the author"
+          class="rounded-full w-full h-full object-cover"
+        />
+      </div>
     </div>
   </div>
 </Layout>
