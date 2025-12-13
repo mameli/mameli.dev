@@ -1,0 +1,186 @@
+<!--
+  Refactored Navbar.astro to use Astro-compatible alternatives.
+  Replaces React and @headlessui/react with native HTML and Astro interactivity.
+-->
+---
+const navigation = [
+  { name: 'Home', href: '/', current: false },
+  { name: 'Projects', href: '/projects', current: false },
+  { name: 'About', href: '/about', current: false },
+];
+---
+
+<nav class="dark:bg-gray-800 bg-white pb-2">
+  <div class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-14">
+      <div class="flex-1 flex justify-center sm:items-stretch sm:justify-start">
+        <div class="flex-auto flex items-center">
+          <a href="/" class="text-2xl rounded-md font-medium">
+            Mameli.Dev
+          </a>
+        </div>
+        <div class="hidden sm:block">
+          <div class="flex space-x-4">
+            {navigation.map((item) => (
+              <a
+                href={item.href}
+                class="hover:underline decoration-wavy underline-offset-8 decoration-green-500 p-2 rounded-xl text-lg font-medium"
+                aria-current={item.current ? 'page' : undefined}
+              >
+                {item.name}
+              </a>
+            ))}
+            <button
+              aria-label="Toggle Dark Mode"
+              type="button"
+              class="w-10 h-10 rounded-xl flex items-center justify-center hover:ring-2 ring-gray-900 dark:ring-gray-300 transition-all text-cyan-500 dark:text-yellow-500"
+              onclick="toggleTheme()"
+            >
+              <svg
+                id="theme-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                class="w-7 h-7"
+              ></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:hidden">
+        <button
+          class="inline-flex items-center justify-center rounded hover:ring-2 ring-gray-900 dark:ring-gray-300 ring-offset-4"
+          onclick="toggleMobileMenu()"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            id="mobile-menu-icon"
+            class="block h-7 w-7"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden sm:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      {navigation.map((item) => (
+        <a
+          href={item.href}
+          class="hover:underline decoration-wavy underline-offset-8 decoration-green-500 p-2 rounded-xl text-lg font-medium block px-2 py-2 dark:text-white text-right"
+          aria-current={item.current ? 'page' : undefined}
+        >
+          {item.name}
+        </a>
+      ))}
+    </div>
+    <div class="px-2">
+      <button
+        aria-label="Toggle Dark Mode"
+        type="button"
+        class="w-10 h-10 rounded-lg flex items-center justify-center hover:ring-2 ring-gray-900 dark:ring-gray-300 transition-all ml-auto"
+        onclick="toggleTheme()"
+      >
+        <svg
+          id="theme-icon-mobile"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          class="w-7 h-7 text-cyan-500 dark:text-yellow-500"
+        ></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  // Initialize theme from localStorage
+  function updateThemeIcon(iconId) {
+    const icon = document.getElementById(iconId);
+    const isDark = document.documentElement.classList.contains('dark');
+    if (icon) {
+      icon.innerHTML = isDark ? `
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+        />
+      ` : `
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+        />
+      `;
+    }
+  }
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.classList.contains('dark');
+    if (isDark) {
+      html.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+    updateThemeIcon('theme-icon');
+    updateThemeIcon('theme-icon-mobile');
+  }
+
+  // Initialize theme
+  if (typeof localStorage !== 'undefined') {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+  updateThemeIcon('theme-icon');
+  updateThemeIcon('theme-icon-mobile');
+
+  // Toggle mobile menu
+  function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('mobile-menu-icon');
+    if (mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.remove('hidden');
+      icon.innerHTML = `
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      `;
+    } else {
+      mobileMenu.classList.add('hidden');
+      icon.innerHTML = `
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      `;
+    }
+  }
+</script>
