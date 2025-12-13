@@ -1,35 +1,48 @@
 ---
-import "../styles/global.css";
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import FormattedDate from '../components/FormattedDate.astro';
+import '../styles/global.css'
+import type { CollectionEntry } from 'astro:content'
+import BaseHead from '../components/BaseHead.astro'
+import FormattedDate from '../components/FormattedDate.astro'
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data']
 
-const { title, description, pubDate, author } = Astro.props;
+const { title, description, pubDate, author } = Astro.props
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
 
-	<body>
-		<div class="container mx-auto max-w-full dark:bg-gray-800 bg-white flex flex-col min-h-screen justify-between">
-			<main class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pb-2 bg-white dark:bg-gray-800 grow">
-				<article>
-					<div class="header-section mb-8 mt-8">
-						<h1 class="text-3xl font-bold mb-2 text-gray-800 dark:text-white">{title}</h1>
-						<p class="text-xl text-gray-800 dark:text-white mb-4">{description}</p>
-						<div class="post-meta text-sm text-gray-800 dark:text-white mb-8">
-							<FormattedDate date={pubDate} />  by <a href="/" class="hover:underline">{author}</a>
-						</div>
-					</div>
-					<div class="prose dark:prose-invert max-w-none text-gray-800 dark:text-white">
-						<slot />
-					</div>
-				</article>
-			</main>
-		</div>
-	</body>
+  <body>
+    <div
+      class="container mx-auto max-w-full dark:bg-gray-800 bg-white flex flex-col min-h-screen justify-between"
+    >
+      <main
+        class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pb-2 bg-white dark:bg-gray-800 grow"
+      >
+        <article>
+          <div class="header-section mb-8 mt-8">
+            <h1 class="text-3xl font-bold mb-2 text-gray-800 dark:text-white">
+              {title}
+            </h1>
+            <p class="text-xl text-gray-800 dark:text-white mb-4">
+              {description}
+            </p>
+            <div class="post-meta text-sm text-gray-800 dark:text-white mb-8">
+              <FormattedDate date={pubDate} /> by <a
+                href="/"
+                class="hover:underline">{author}</a
+              >
+            </div>
+          </div>
+          <div
+            class="prose dark:prose-invert max-w-none text-gray-800 dark:text-white prose-h1:text-3xl prose-a:text-blue-600 prose-blockquote:border-l-4 prose-blockquote:border-gray-300 prose-code:bg-gray-100 prose-code:dark:bg-gray-700"
+          >
+            <slot />
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
 </html>
