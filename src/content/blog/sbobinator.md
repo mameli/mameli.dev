@@ -1,22 +1,19 @@
 --- 
 title: "Sbobinator"
 description: "Web app for transcripting audio files with OpenAI"
-pubDate: "2023-06-01"
-heroImage: "../../assets/profile.png"
+pubDate: "2024-03-24"
 --- 
 
-# Sbobinator
+Since the OpenAI API's release, I've pondered: "Is developing a GPT4-based service truly revolutionary?" To find out, practical coding is key. Thus, Sbobinator emerged—a tool streamlining audio transcription, offering concise summaries.
 
-Web app for transcripting audio files with OpenAI
+![sbobinator](https://github.com/mameli/sbobinator/assets/7951066/d360c2e4-e68f-45d3-bde2-d1e4a50a6bf9)
 
-In this blog post, I discuss how to build a web app for transcripting audio files using OpenAI. This guide provides step-by-step instructions on how to gather and analyze audio data.
+Key points:
 
-## Key Takeaways
+- API usage is simple.
+- Documentation is comprehensive.
+- With standard models, call prices are negligible (e.g., 15 cents utilized here).
 
-1. **Data Collection**: How to collect audio data.
-2. **Data Analysis**: How to analyze the collected data using OpenAI.
-3. **Visualization**: How to visualize the results of your analysis.
+Crafting such an app requires merely a weekend, democratizing product development. Yet, navigating sales, customer acquisition, and service conception complexities persists.
 
-## Conclusion
-
-By following this guide, you can gain valuable insights into your audio data.
+Thus, the initial question is affirmed—simplification has indeed been achieved. Technologies are mature and user-friendly. Nevertheless, the journey entails significant challenges, particularly in marketing and customer acquisition. This endeavor, primarily a proof of concept for a LinkedIn post, prompts contemplation on subsequent steps.
