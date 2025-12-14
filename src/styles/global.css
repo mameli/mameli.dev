@@ -8,13 +8,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'EBGaramond';
-  src: url('/fonts/EBGaramond-Medium.woff2') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
 :root {
   --font-family: 'EBGaramond', sans-serif;
 }
