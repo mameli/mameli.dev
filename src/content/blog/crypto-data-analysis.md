@@ -1,43 +1,141 @@
---- 
-title: "Crypto data analysis"
-description: "An overkill implementation of a kafka-spark crypto's trades analyser"
+---
+title: "Analyzing Crypto Data"
+description: "Building a Real-Time Crypto Data Analyzer with Kafka and Spark"
 pubDate: "2021-05-12"
 ---
 
-# Building a Real-Time Crypto Data Pipeline with Akka, Kafka, and Spark
-
 ## Introduction
-Ever wondered how to get your hands on live cryptocurrency data and process it in real-time? This post will walk you through a practical project that demonstrates building a robust data pipeline using some powerful technologies: Akka for reactive stream processing, Apache Kafka as a scalable message broker, and Apache Spark Structured Streaming for real-time data consumption. We'll explore how these components work together to ingest live order book data from a cryptocurrency exchange via WebSockets.
+Have you ever wanted to get live cryptocurrency data and process it instantly? This post shows you a project that builds a strong data pipeline. It uses powerful tools like Akka for handling data streams, Apache Kafka for sending messages, and Apache Spark Structured Streaming for processing data in real-time. We'll see how these tools work together to get live order book data from a crypto exchange using WebSockets.
 
 ## Core Technologies and Their Implementation
 
-Our project leverages a combination of cutting-edge tools to create an efficient and scalable real-time data pipeline.
+Our project uses several advanced tools to create a fast and scalable real-time data pipeline.
 
-### 1. Real-Time Data Ingestion with WebSockets and Akka
+### 1. Getting Live Data with WebSockets and Akka
 
-To get live market data, we connect directly to a cryptocurrency exchange using WebSockets. This push-based communication is far more efficient than traditional polling.
+To get live market data, we connect straight to a cryptocurrency exchange using WebSockets. This method sends data to us directly, which is much faster than constantly asking for updates (polling).
 
-*   **`WebSocketAkka.scala`**: This Scala application, built with Akka, is responsible for establishing and managing the WebSocket connection. It uses the `sttp` client library for convenient WebSocket interactions.
-    *   **Connection**: The application connects to `wss://ws.bitstamp.net`.
-    *   **Subscription**: It subscribes to the `live_orders_btcusd` channel to receive real-time Bitcoin/USD order book updates.
-    *   **Data Flow**: As messages stream in from the WebSocket, Akka Streams efficiently handle the data. Each incoming message is then prepared for publishing to Kafka.
+*   **`WebSocketAkka.scala`**: This Scala program, built with Akka, sets up and manages the WebSocket connection. It uses the `sttp` library to make WebSocket interactions easy.
+    *   **Connection**: The program connects to `wss://ws.bitstamp.net`.
+    *   **Subscription**: It signs up for the `live_orders_btcusd` channel to get instant Bitcoin/USD order book updates.
+    *   **Data Flow**: Akka Streams efficiently handle messages as they come in from the WebSocket. Each message is then made ready to be sent to Kafka.
 
-### 2. Apache Kafka: The Real-Time Message Broker
+Here's how the WebSocket connection is established and the subscription message is sent in `WebSocketAkka.scala`:
+```scala
+// Establish WebSocket connection to Bitstamp
+basicRequest
+  .response(asWebSocket(useWebSocket))
+  .get(uri"wss://ws.bitstamp.net")
+  .send(backend)
 
-Once we receive data from the WebSocket, we need a reliable and scalable way to distribute it to various consumers. This is where Apache Kafka comes in.
+// Send subscription message for live_orders_btcusd channel
+send(
+  """
+    |{
+    |    "event": "bts:subscribe",
+    |    "data": {
+    |        "channel": "live_orders_btcusd"
+    |    }
+    |}
+    |""".stripMargin)
+```
 
-*   **Akka Kafka Producer**: Integrated within `WebSocketAkka.scala`, an Akka Kafka Producer takes the real-time messages received from the WebSocket and publishes them to a Kafka topic named `testTopic`. Kafka ensures that these messages are durably stored and available for any downstream applications that wish to consume them.
-    *   **Configuration**: The Kafka producer settings are managed through `application.conf`, allowing for flexible configuration of Kafka brokers and other parameters.
+The `ws_source` in `WebSocketAkka.scala` demonstrates how Akka Streams handle incoming messages from the WebSocket:
+```scala
+val ws_source: Source[Future[String], Cancellable] = Source
+  .tick(1.second, 0.1.second, ())
+  .map(_ => ws.receiveText())
+```
 
-### 3. Apache Spark Structured Streaming: Real-Time Data Consumption
+### 2. Apache Kafka: The Real-Time Message System
 
-With the data flowing into Kafka, we can now consume and process it in real-time using Apache Spark Structured Streaming.
+After we get data from the WebSocket, we need a dependable way to send it to different users. Apache Kafka helps us do this in a way that can handle a lot of data.
 
-*   **`KafkaConsumer.scala`**: This Spark application is designed to continuously read data from our `testTopic` in Kafka.
-    *   **SparkSession**: It initializes a `SparkSession` configured for local execution, making it easy to run and test.
-    *   **Stream Reading**: `spark.readStream.format("kafka")` is used to connect to Kafka and subscribe to the `testTopic`. It starts reading from the `earliest` available offset, ensuring no data is missed.
-    *   **Basic Processing**: Currently, the application casts the incoming Kafka message `value` to a string and prints it to the console. This serves as a foundational example. In a production environment, this is where you would implement complex real-time analytics, aggregations, or machine learning models.
+*   **Akka Kafka Producer**: Inside `WebSocketAkka.scala`, an Akka Kafka Producer takes the live messages from the WebSocket and sends them to a Kafka topic called `testTopic`. Kafka makes sure these messages are saved safely and can be used by any other programs later.
+    *   **Configuration**: We set up the Kafka producer in `application.conf`. This lets us easily change settings for Kafka servers and other options.
+
+The `WebSocketAkka.scala` file configures the Kafka producer and sends messages:
+```scala
+val config = system.settings.config.getConfig("akka.kafka.producer")
+val producerSettings =
+  ProducerSettings(config, new StringSerializer, new StringSerializer)
+    .withBootstrapServers("localhost:9092")
+
+val kafka_source = ws_source
+  .mapAsync(1)(m => m)
+  .map(msg => {
+    system.log.info(s"producing $msg")
+    new ProducerRecord[String, String]("testTopic", msg)
+  })
+  .log("producer")
+
+kafka_source.runWith(Producer.plainSink(producerSettings))
+```
+
+The `application.conf` file provides the configuration for the Akka Kafka producer:
+```conf
+akka.kafka.producer {
+  discovery-method = akka.discovery
+
+  service-name = ""
+
+  resolve-timeout = 3 seconds
+
+  parallelism = 10000
+
+  close-timeout = 60s
+
+  close-on-producer-stop = true
+
+  use-dispatcher = "akka.kafka.default-dispatcher"
+
+  eos-commit-interval = 100ms
+
+  kafka-clients {
+  }
+}
+```
+
+### 3. Apache Spark Structured Streaming: Using Data in Real-Time
+
+Once the data is in Kafka, we can use Apache Spark Structured Streaming to read and process it instantly.
+
+*   **`KafkaConsumer.scala`**: This Spark program constantly reads data from our `testTopic` in Kafka.
+    *   **SparkSession**: It starts a `SparkSession` set up to run locally. This makes it simple to run and test.
+    *   **Stream Reading**: We use `spark.readStream.format("kafka")` to connect to Kafka and get data from `testTopic`. It starts reading from the `earliest` available message, so no data is lost.
+    *   **Basic Processing**: Right now, the program turns the incoming Kafka message `value` into text and shows it on the screen. This is a basic example. In a real-world setup, you would do more complex real-time analysis, combine data, or use machine learning models here.
+
+The `KafkaConsumer.scala` file initializes the `SparkSession`:
+```scala
+val spark: SparkSession = SparkSession.builder()
+  .appName("Integrating Kafka")
+  .master("local[2]")
+  .getOrCreate()
+```
+
+Reading data from Kafka using Spark Structured Streaming is done as follows:
+```scala
+val kafkaDF: DataFrame = spark.readStream
+  .format("kafka")
+  .option("kafka.bootstrap.servers", "localhost:9092")
+  .option("subscribe", "testTopic")
+  .option("startingOffsets", "earliest")
+  .load()
+```
+
+Finally, the basic processing and output to console in `KafkaConsumer.scala`:
+```scala
+kafkaDF
+  .select(col("topic"), 
+          col("offset"), 
+          expr("cast(value as string) as actualValue"))
+  .writeStream
+  .format("console")
+  .outputMode("append")
+  .start()
+  .awaitTermination()
+```
 
 ## Conclusion
 
-This project provides a clear blueprint for building a powerful real-time data pipeline. By combining the reactive capabilities of Akka and WebSockets for ingestion, the robust messaging of Kafka, and the real-time processing power of Spark Structured Streaming, developers can create highly scalable and responsive applications for analyzing dynamic data streams like cryptocurrency markets. This architecture is not just for crypto; it's a versatile pattern applicable to any scenario requiring high-throughput, low-latency data processing.
+This project gives a clear guide for building a strong real-time data pipeline. By using Akka and WebSockets to get data, Kafka for reliable messaging, and Spark Structured Streaming for instant processing, developers can build apps that can handle a lot of data and respond quickly. These apps can analyze fast-changing data streams, like those from crypto markets. This setup isn't just for crypto; it's a flexible way to handle any situation that needs to process a lot of data quickly and with little delay.
