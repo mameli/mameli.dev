@@ -1,2 +1,2 @@
-export const SITE_TITLE = 'Astro Blog Template';
-export const SITE_DESCRIPTION = 'A lightweight, minimally-styled starting point for anyone looking to build a personal website, blog, or portfolio with Astro.';
+export const SITE_TITLE = 'Mameli Blog';
+export const SITE_DESCRIPTION = 'A blog about software development, programming, and technology.';
