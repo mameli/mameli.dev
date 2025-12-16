@@ -7,11 +7,11 @@ import tailwindcss from "@tailwindcss/vite";
 
 import vercel from '@astrojs/vercel';
 
-import { SITE_TITLE } from "./src/consts.ts";
+import { SITE } from "./src/consts.ts";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE_TITLE,
+  site: SITE,
   integrations: [mdx(), sitemap()],
 
   markdown: {
