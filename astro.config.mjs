@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 
-import vercelStatic from '@astrojs/vercel/static';
+import vercel from '@astrojs/vercel';
 
 import { SITE_TITLE } from "./src/consts.ts";
 
@@ -25,7 +25,7 @@ export default defineConfig({
 
   vite: {
       plugins: [tailwindcss()],
-	},
+  },
   output: 'static',
-  adapter: vercelStatic(),
+  adapter: vercel(),
 });
