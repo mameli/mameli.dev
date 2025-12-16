@@ -9,6 +9,14 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
 	site: 'https://example.com',
 	integrations: [mdx(), sitemap()],
+	markdown: {
+		shikiConfig: {
+			themes: {
+				dark: 'one-dark-pro',
+				light: 'solarized-light',
+			},
+		},
+	},
 	vite: {
 		plugins: [tailwindcss()],
 	},
