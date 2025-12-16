@@ -4,11 +4,9 @@ description: "Web app for creating movies/book summaries with Ollama"
 pubDate: "2023-05-15"
 --- 
 
-# Make it short
-
 I made [this](https://github.com/mameli/make_it_short/tree/main) simple web app that uses the LLama model from Ollama to summarize text. It is a simple example of how to use the Ollama API to create a web app.
 
-<img title="example screen" alt="app screenshot" src="https://github.com/mameli/make_it_short/blob/main/public/screen.png?raw=true">
+<img title="example screen" alt="app screenshot" src="https://res.cloudinary.com/deoefumc4/image/upload/v1765899649/Screen_from_make_it_short_dn2ilp.png">
 
 I came across Ollama(https://ollama.ai/) and developed this web app. It took me:
 - 5 minutes to configure #LLama 2 with a prompt

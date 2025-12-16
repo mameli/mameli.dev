@@ -21,11 +21,17 @@ To control the output of an LLM, adjust key parameters:
 - Top-K / Top-P: Limit choices to Top-K tokens or cumulative Top-P probability.
 - Max tokens: Defines the maximum response length. Keep it short to avoid rambling.
 
+
 For factual tasks, it is better to use a lower temperature. For more creative writing, you can tweak the temperature to higher values and experiment with the outputs.
 There is no right or wrong configuration. The best approach is to test different parameters.
 
 To test this, you need to use an API that accepts these parameters as input. You cannot directly tweak these configuration parameters in ChatGPT.
 Experiment with them by asking the same question with different temperature or Top-K settings. For example, ask, "Invent three names for a futuristic coffee shop" using a temperature setting of 0.1 and then 0.9, and observe the results.
+
+<picture>
+  <source srcset="https://res.cloudinary.com/deoefumc4/image/upload/v1765885227/Prompt_-_visual_selection_1_mc9glo.png" media="(prefers-color-scheme: dark)">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1765885262/Prompt_-_visual_selection_di8gkd.png" alt="Infographic of temperature, top-k/top-p and max token">
+</picture>
 
 ## 2. Prompt Design Is Iterative
 
@@ -34,6 +40,12 @@ In the first point, I already hinted at another important aspect of prompt engin
 Your first attempt will rarely yield the best output. **Prompt engineering is an experimental and versioned process**.
 
 Change one thing at a time: wording, examples, configuration parameters like temperature or max tokens. Then test and compare results.
+
+<picture>
+  <source srcset="https://res.cloudinary.com/deoefumc4/image/upload/v1765885438/Prompt_-_visual_selection_5_ywrdz2.png" media="(prefers-color-scheme: dark)">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1765885478/Prompt_-_visual_selection_4_djfxfl.png" alt="Infographic of iterative prompt design">
+</picture>
+
 
 Track the prompt performance and use version control if possible. To better record what works and what doesn’t, you should save things like:
 
@@ -50,23 +62,30 @@ LLMs are context-dependent: the more relevant information you give them, the bet
 
 Google’s guide emphasizes **three ways to embed context**:
 
-### a) System prompts
+## System prompts
 
 Define the *rules of the game* upfront. This defines the task or output format.
 
 > You are a helpful assistant. Always respond in JSON format with keys: “answer” and “confidence”
 
-### b) Role prompting
+## Role prompting
 
 Assign the model a persona to control tone and style.
 
 > You are a nutritionist. Explain whether this meal is healthy: “Pasta, guanciale, pecorino and eggs”
 
-### c) Contextual prompts
+<picture>
+  <source srcset="https://res.cloudinary.com/deoefumc4/image/upload/v1765885615/Prompt_-_visual_selection_2_oagocj.png" media="(prefers-color-scheme: dark)">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1765885578/Prompt_-_visual_selection_3_grx2jj.png" alt="Infographic of role prompting" style="width: 50%; display: block; margin: 0 auto;">
+</picture>
+
+## Contextual prompts
 
 Include relevant background, data, or constraints.
 
 > Context: This conversation is for a high school history class. Question: Why did the Roman Empire fall?
+
+---
 
 Another technique you can use is step-back prompting. Basically, you can improve the reasoning of the model by prompting general knowledge first.
 For example, the direct approach for writing a video game level could be something like:
@@ -111,6 +130,11 @@ Let's think step by step:
 - I’m now 17 years older → brother is 9 + 17 = 26
 
 A CoT approach encourages the model to calculate incrementally rather than guessing.
+
+<picture>
+  <source srcset="https://res.cloudinary.com/deoefumc4/image/upload/v1765892510/Visual_Selection_Prompt_3_u9amsm.png" media="(prefers-color-scheme: dark)">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1765892546/Visual_Selection_Prompt_2_mzaltv.png" alt="Infographic of Chain of Thought prompting" style="display: block; margin: 0 auto;">
+</picture>
 
 Works well for:
 
@@ -157,6 +181,11 @@ The Google guide closes with a set of practical do’s and don’ts. My distille
 - **Use examples**: few-shot prompting improves consistency
 - **Control output length**: specify word count, bullet count, or token limit
 - **Review and iterate**: collect and compare outputs to refine prompts
+
+<picture>
+  <source srcset="https://res.cloudinary.com/deoefumc4/image/upload/v1765892304/Visual_Selection_Prompt_1_xxhuvg.png" media="(prefers-color-scheme: dark)">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1765892437/Visual_Selection_Prompt_n0rnur.png" alt="Infographic of best practices in prompt engineering" style="width: 50%; display: block; margin: 0 auto;">
+</picture>
 
 ---
 

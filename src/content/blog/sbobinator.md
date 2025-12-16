@@ -6,7 +6,7 @@ pubDate: "2024-03-24"
 
 When OpenAI released its API, I wondered: "Is it truly groundbreaking to build a service with GPT-4?" To answer this, I decided to build something practical. That's how Sbobinator was born. It's a tool that makes transcribing audio easy and provides short summaries.
 
-![sbobinator](https://github.com/mameli/sbobinator/assets/7951066/d360c2e4-e68f-45d3-bde2-d1e4a50a6bf9)
+![sbobinator](https://res.cloudinary.com/deoefumc4/image/upload/v1765899668/316329557-d360c2e4-e68f-45d3-bde2-d1e4a50a6bf9_hxzzcq.jpg)
 
 Here are the main points:
 
