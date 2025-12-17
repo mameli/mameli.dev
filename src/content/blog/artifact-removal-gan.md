@@ -2,6 +2,7 @@
 title: "Restoring Compressed Media"
 description: "A Fast, Perceptual NoGAN Approach"
 pubDate: "2020-04-20"
+image: https://res.cloudinary.com/deoefumc4/image/upload/v1765894204/GAN_Image_from_Artifact_Removal_kyhd8d.jpg
 ---
 
 Lossy compression is the backbone of modern media streaming and storage, but it comes at a visual cost. As compression rates rise to accommodate bandwidth limitations, algorithms like [JPEG](https://en.wikipedia.org/wiki/JPEG) introduce distinct visual distortions. A new study addresses this challenge by adapting the "NoGAN" training strategy, combining it with efficient architecture to perform Visual Quality Enhancement (VQE) and super-resolution suitable for real-time applications.
