@@ -1,14 +1,21 @@
 ---
 title: "Migrating My Personal Website"
-description: "Exploring alternatives to Next.js"
-pubDate: "2025-12-20"
+description: "Exploring alternatives to Next.js after recent vulnerabilities"
+pubDate: "2025-12-17"
 ---
 
 This December has been a disaster for React; there were not [one](https://nextjs.org/blog/CVE-2025-66478) but [two](https://nextjs.org/blog/security-update-2025-12-11) vulnerabilities that impacted my sites. Nothing serious, as I don't have anything critical developed with Next.js, but I still saw some very strange accesses that made me raise an eyebrow.
 
 To address the issue on my personal website, I tried updating to the latest version of Next.js, but the transition was too burdensome and, for a static site, not worth the effort.
 
+
+<div style="display: flex; justify-content: left;">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1765932268/react_miqz4e.png" alt="react vulnerability" style="width: 48%;"/>
+</div>
+
 All this discontent led me to consider completely migrating my personal site to another technology. Usually, I've made these migrations more for playing with new tools than out of necessity, but in this case, it feels more like an added value than a waste of time.
+
+## Defining My Requirements
 
 So I turned to Grok to ask about the best alternatives available today. My requirements were:
 - To have a site that is easy to maintain.
@@ -22,11 +29,15 @@ I wrote the most generic prompt in the world, and drumroll please...
 
 The other options were [Joomla](https://www.joomla.org/) and [Drupal](https://new.drupal.org/home). Grok, are you alright? Anyway, let's move on.
 
+## Discovering Astro
+
 I refined my requirements, and [Astro](https://astro.build/) popped up.
 
-I had already seen a Fireship video where he spoke highly of it, and Theo also shared the same opinion in one of his FOMO-filled videos. However, I never tried it because at the time it seemed pointless to replace Next.js with another shiny new framework.
+I had already seen a Fireship [video](https://youtu.be/gxBkghlglTg?si=Vu2mMo38Qsw_xo9u) where he spoke highly of it, and Theo also shared the same opinion in one of his FOMO-filled videos. However, I never tried it because at the time it seemed pointless to replace Next.js with another shiny new framework.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3xqa0SsRbdM?si=wwQe-dJ1AA7mQvFW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## The Migration Process
 
 Before discussing the migration, I want to mention that there were other alternatives I considered, such as [Svelte](https://svelte.dev/) and [Nuxt.js](https://nuxt.com/), but the learning curve seemed too steep for a switch.
 
@@ -35,15 +46,31 @@ Before migrating, I wanted to see how Astro performed, so the first step was to 
 I continued with the tutorial, and everything seemed very clean. The ability to use minimal JavaScript really helps a lot. After all, I want to build a static site, why should I weigh it down with scripts?
 
 From the tutorial, everything seemed great. I created a new branch and started directly from the blog template, which is selectable with the creation command. From this point on, there's little to say because everything went smoothly:
-- Tailwind integration: check
-- Custom font import: check
-- Common layout creation: check
-- Custom Markdown with typography: check
-- Code theme: check
+- Tailwind integration: ✅
+- Custom font import: ✅
+- Common layout creation: ✅
+- Custom Markdown with [typography](https://docs.astro.build/en/recipes/tailwind-rendered-markdown/): ✅
+- Code theme: ✅
+
+```javascript
+// code theme config
+markdown: {
+        shikiConfig: {
+            themes: {
+                dark: 'one-dark-pro',
+                light: 'solarized-light',
+            },
+        },
+    },
+```
 
 These are all basic things, but I didn't encounter any problems and focused mostly on the more enjoyable part, which was the design.
 
+## Image Management with Cloudinary
+
 Finally, I wanted to avoid cluttering a GitHub repo with all the photos. It becomes quite difficult to manage and slows down loading. For this reason, I chose to upload images to [Cloudinary](https://cloudinary.com/), which has a very generous free plan and offers some additional, very useful functionalities.
+
+## Conclusion
 
 Astro proved to be excellent for my use case. I'm currently writing this post in Markdown to publish it, and it's incredibly convenient to use all the AI tools to correct grammar, format, etc. It's truly a game-changer for content creation and management.
 

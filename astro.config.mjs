@@ -11,21 +11,21 @@ import { SITE } from "./src/consts.ts";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE,
-  integrations: [mdx(), sitemap()],
+    site: SITE,
+    integrations: [mdx(), sitemap()],
 
-  markdown: {
-      shikiConfig: {
-          themes: {
-              dark: 'one-dark-pro',
-              light: 'solarized-light',
-          },
-      },
-	},
+    markdown: {
+        shikiConfig: {
+            themes: {
+                dark: 'one-dark-pro',
+                light: 'solarized-light',
+            },
+        },
+    },
 
-  vite: {
-      plugins: [tailwindcss()],
-  },
-  output: 'static',
-  adapter: vercel(),
+    vite: {
+        plugins: [tailwindcss()],
+    },
+    output: 'static',
+    adapter: vercel(),
 });
