@@ -2,6 +2,7 @@
 title: "Migrating My Personal Website"
 description: "Exploring alternatives to Next.js after recent vulnerabilities"
 pubDate: "2025-12-17"
+heroImage: "https://res.cloudinary.com/deoefumc4/image/upload/v1765932268/react_miqz4e.png"
 ---
 
 This December has been a disaster for React; there were not [one](https://nextjs.org/blog/CVE-2025-66478) but [two](https://nextjs.org/blog/security-update-2025-12-11) vulnerabilities that impacted my sites. Nothing serious, as I don't have anything critical developed with Next.js, but I still saw some very strange accesses that made me raise an eyebrow.
