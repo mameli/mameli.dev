@@ -37,11 +37,17 @@ const { title, description, pubDate, author } = Astro.props
             </div>
           </div>
           <div
-            class="prose dark:prose-invert max-w-full text-gray-800 dark:text-white prose-h1:text-4xl prose-p:text-xl prose-li:text-xl prose-blockquote:text-sm prose-a:text-green-800 prose-a:dark:text-green-200 prose-code:text-base prose-code:before:hidden prose-code:after:hidden mb-18"
+            class="prose dark:prose-invert max-w-full text-gray-800 dark:text-white prose-h1:text-4xl prose-p:text-xl prose-li:text-xl prose-blockquote:text-sm prose-a:text-green-800 prose-a:dark:text-green-200 prose-code:text-base prose-code:before:hidden prose-code:after:hidden mb-8"
           >
             <slot />
           </div>
         </article>
+        <div class="mb-8">
+          <p class="text-xl text-gray-800 dark:text-white mb-2">
+            Thanks for reading all the way to the end! If the content was useful, consider buying me a coffee to keep the tech posts coming 💚
+          </p>
+          <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="mameli.dev" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+        </div>
       </main>
     </div>
   </body>

@@ -1,5 +1,5 @@
 ---
-title: "Making K-Means Clustering Work for Big Data"
+title: "K-Means Clustering for Big Data"
 description: "A Closer Look with Apache Hadoop MapReduce"
 pubDate: "2017-03-07"
 ---
