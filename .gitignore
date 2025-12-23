@@ -30,3 +30,4 @@ pnpm-debug.log*
 .DS_Store
 .vscode/
 old_site/
+.kilocode/mcp.json
