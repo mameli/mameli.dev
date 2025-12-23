@@ -15,23 +15,23 @@ export default defineConfig({
     site: SITE,
     integrations: [mdx(), sitemap(), pwa({
         manifest: {
-            name: 'Mameli Blog',
-            short_name: 'Mameli',
+            name: 'Mameli Blog App',
+            short_name: 'Mameli.dev',
             description: 'A blog about software development, programming, and technology.',
             theme_color: '#ffffff',
             icons: [
                 {
-                    src: '/pwa-icon-192.png',
+                    src: 'pwa-icon-192.png',
                     sizes: '192x192',
                     type: 'image/png'
                 },
                 {
-                    src: '/pwa-icon-512.png',
+                    src: 'pwa-icon-512.png',
                     sizes: '512x512',
                     type: 'image/png'
                 },
                 {
-                    src: '/apple-touch-icon.png',
+                    src: 'apple-touch-icon.png',
                     sizes: '180x180',
                     type: 'image/png'
                 }
