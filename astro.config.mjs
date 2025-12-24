@@ -14,6 +14,9 @@ import { SITE } from "./src/consts.ts";
 export default defineConfig({
     site: SITE,
     integrations: [mdx(), sitemap(), pwa({
+        includeAssets: ['favicon.ico', 'pwa-icon-192.png'],
+        base: '/',
+        scope: '/',
         manifest: {
             "name": "Mameli Blog",
             "description": "A blog about software development, programming, and technology.",
