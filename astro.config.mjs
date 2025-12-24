@@ -17,12 +17,17 @@ export default defineConfig({
         mode: 'development',
         base: '/',
         scope: '/',
-        includeAssets: ['favicon.ico'],
+        includeAssets: ['favicon.ico', 'favicon-180x180.png'],
         manifest: {
-            name: 'Astro PWA',
-            short_name: 'Astro PWA',
+            name: 'Mameli Blog',
+            short_name: 'Mameli Blog',
             theme_color: '#ffffff',
             icons: [
+                {
+                    src: 'favicon-180x180.png',
+                    sizes: '180x180',
+                    type: 'image/png',
+                },
                 {
                     src: 'favicon-192x192.png',
                     sizes: '192x192',
