@@ -17,6 +17,13 @@ export default defineConfig({
         includeAssets: ['favicon.ico', 'pwa-icon-192.png'],
         base: '/',
         scope: '/',
+        pwaAssets: {
+            config: true,
+        },
+        workbox: {
+            navigateFallback: '/',
+            globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}'],
+        },
         manifest: {
             "name": "Mameli Blog",
             "description": "A blog about software development, programming, and technology.",
