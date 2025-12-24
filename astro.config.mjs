@@ -15,30 +15,64 @@ export default defineConfig({
     site: SITE,
     integrations: [mdx(), sitemap(), pwa({
         manifest: {
-            name: 'Mameli Blog',
-            short_name: 'Mameli.dev',
-            description: 'A blog about software development, programming, and technology.',
-            theme_color: '#ffffff',
-            icons: [
+            "name": "Mameli Blog",
+            "description": "A blog about software development, programming, and technology.",
+            "short_name": "Mameli.dev",
+            "icons": [
                 {
-                    src: 'assets/pwa-icon-192.png',
-                    sizes: '192x192',
-                    type: 'image/png',
-                    purpose: 'any',
+                    "src": "/favicon-72x72.png",
+                    "type": "image/png",
+                    "sizes": "72x72",
+                    "purpose": "any maskable"
                 },
                 {
-                    src: 'assets/pwa-icon-512.png',
-                    sizes: '512x512',
-                    type: 'image/png',
-                    purpose: 'any',
+                    "src": "/favicon-96x96.png",
+                    "type": "image/png",
+                    "sizes": "96x96",
+                    "purpose": "any maskable"
                 },
                 {
-                    src: 'assets/apple-touch-icon.png',
-                    sizes: '180x180',
-                    type: 'image/png',
-                    purpose: 'any',
+                    "src": "/favicon-128x128.png",
+                    "type": "image/png",
+                    "sizes": "128x128",
+                    "purpose": "any maskable"
+                },
+                {
+                    "src": "/favicon-144x144.png",
+                    "type": "image/png",
+                    "sizes": "144x144",
+                    "purpose": "any maskable"
+                },
+                {
+                    "src": "/favicon-152x152.png",
+                    "type": "image/png",
+                    "sizes": "152x152",
+                    "purpose": "any maskable"
+                },
+                {
+                    "src": "/favicon-192x192.png",
+                    "type": "image/png",
+                    "sizes": "192x192",
+                    "purpose": "any maskable"
+                },
+                {
+                    "src": "/favicon-384x384.png",
+                    "type": "image/png",
+                    "sizes": "384x384",
+                    "purpose": "any maskable"
+                },
+                {
+                    "src": "/favicon-512x512.png",
+                    "type": "image/png",
+                    "sizes": "512x512",
+                    "purpose": "any maskable"
                 }
-            ]
+            ],
+            "scope": "/",
+            "start_url": "/?source=pwa",
+            "display": "standalone",
+            "theme_color": "#ffffff",
+            "background_color": "#ffffff"
         }
     })],
 
