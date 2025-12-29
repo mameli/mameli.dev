@@ -28,7 +28,7 @@ But ever since this tweet gave rise to the "**vibe coding"** movement, I've incr
 From February 2025 to July I tried many tools, but none convinced me. I tried [Tabby](https://tabby.tabbyml.com/docs/administration/code-completion/), but it was a disaster. It wasn't even remotely comparable to Copilot. I subscribed to ChatGPT and went on with the desktop client integration with VS Code. I liked it, but it was very limited.
 
 <div style="display: flex; justify-content: center;">
-  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680931/chatgpt_t0ktgx.png" alt="chatgpt integration" style="width: 48%;"/>
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680931/chatgpt_t0ktgx.png" alt="chatgpt integration" style="width: 60%;"/>
 </div>
 
 I tried Cursor and I liked it a lot, but paying a subscription just for coding didn't sit right with me. Then I finally arrived at the stack I'm using now.
@@ -54,7 +54,7 @@ Let's start with the text editor, VS Code. **For me** it's the best because I ha
 To VS Code I add the [KiloCode](https://kilo.ai/) plugin, which is very well integrated with the editor and, above all, doesn't tie me to a specific provider. I can use any provider I have credits for.
 
 <div style="display: flex; justify-content: center;">
-  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680932/kilo_iveal4.png" alt="vscode" style="width: 80%;"/>
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680932/kilo_iveal4.png" alt="vscode" style="width: 90%;"/>
 </div>
 
 I use the Neovim plugin for vim motions and because I'm a fan of [ThePrimeagen](https://www.youtube.com/@ThePrimeTimeagen).
@@ -62,7 +62,7 @@ I use the Neovim plugin for vim motions and because I'm a fan of [ThePrimeagen](
 [OpenCode](https://opencode.ai/) is a more recent addition, but I'm finding myself doing very well with it. There's a big overlap between KiloCode and this coding agent, but I often find myself using one or the other depending on the situation. A very useful feature of OpenCode is that it also uses the Language Server Protocol (LSP) to help the model interact with the code. As a terminal I use [Ghostty](https://ghostty.org/).
 
 <div style="display: flex; justify-content: center;">
-  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680932/opencode_xpezg9.png" alt="opencode" style="width: 80%;"/>
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680932/opencode_xpezg9.png" alt="opencode" style="width: 90%;"/>
 </div>
 
 Finally, the best discovery I made this year was finding [OpenRouter](https://openrouter.ai/). In such a dynamic environment as AI, I've always felt constrained by having to subscribe to or add credits to OpenAI or Anthropic or Google. With this provider I solve the problem because I can use all the models I want and the newest ones are added within a few days at most. I'm happy to pay 5% more to have this freedom of choice. Returning to the disclaimer, I can also add that I can use open source models or, in general, very efficient models. In these last months I've often found myself using, for example, Grok Code Fast because: 1) it's fast (duh?), 2) it costs little, and 3) I find it concise and direct.
@@ -82,7 +82,7 @@ That said, I've done well with Z.Ai models like GLM 4.5 Air (now 4.7 has come ou
 This is my wrapped of the models I've used the most this year:
 
 <div style="display: flex; justify-content: center;">
-  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680931/model_wrapped_hr2plw.png" alt="models" style="width: 80%;"/>
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680931/model_wrapped_hr2plw.png" alt="models" style="width: 90%;"/>
 </div>
 
 I practically never use Anthropic models because they're super expensive and not worth using. I found myself using Claude Sonnet as a last resort after cheaper models had failed, but it still didn't manage to turn the situation around, spending many credits uselessly.
