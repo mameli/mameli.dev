@@ -1,8 +1,8 @@
 ---
-title: "My 2026 Coding Stack"
-description: "Why I Stick With Flexibility Over Hype"
-pubDate: "2025-12-29"
-heroImage: "https://res.cloudinary.com/deoefumc4/image/upload/v1766680931/coding_cw69ig.jpg"
+title: 'My 2026 Coding Stack'
+description: 'Why I Stick With Flexibility Over Hype'
+pubDate: '2025-12-29'
+heroImage: 'https://res.cloudinary.com/deoefumc4/image/upload/v1766680931/coding_cw69ig.jpg'
 ---
 
 It's the end of the year and, as usual, we're all doing life wrap-ups. Spotify Wrapped comes out (not that relevant since I switched to Apple Music), [Letterboxd](https://letterboxd.com/) Wrapped comes out, people make reels with their travel collections, and so on.
@@ -19,13 +19,15 @@ I don't want to give a history lesson by listing the step-by-step evolution of t
 
 But ever since this tweet gave rise to the "**vibe coding"** movement, I've increasingly felt like I was missing out on something big.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">There&#39;s a new kind of coding I call &quot;vibe coding&quot;, where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. It&#39;s possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good. Also I just talk to Composer with SuperWhisper…</p>&mdash; Andrej Karpathy (@karpathy) <a href="https://twitter.com/karpathy/status/1886192184808149383?ref_src=twsrc%5Etfw">February 2, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div style="display: flex; justify-content: center;">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">There&#39;s a new kind of coding I call &quot;vibe coding&quot;, where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. It&#39;s possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good. Also I just talk to Composer with SuperWhisper…</p>&mdash; Andrej Karpathy (@karpathy) <a href="https://twitter.com/karpathy/status/1886192184808149383?ref_src=twsrc%5Etfw">February 2, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
 ## Finding My Stack
 
 From February 2025 to July I tried many tools, but none convinced me. I tried [Tabby](https://tabby.tabbyml.com/docs/administration/code-completion/), but it was a disaster. It wasn't even remotely comparable to Copilot. I subscribed to ChatGPT and went on with the desktop client integration with VS Code. I liked it, but it was very limited.
 
-<div style="display: flex; justify-content: left;">
+<div style="display: flex; justify-content: center;">
   <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680931/chatgpt_t0ktgx.png" alt="chatgpt integration" style="width: 48%;"/>
 </div>
 
@@ -38,6 +40,7 @@ That said...
 ## My Current Stack
 
 This is the stack:
+
 - VS Code
 - KiloCode plugin
 - Neovim plugin
@@ -50,7 +53,7 @@ Let's start with the text editor, VS Code. **For me** it's the best because I ha
 
 To VS Code I add the [KiloCode](https://kilo.ai/) plugin, which is very well integrated with the editor and, above all, doesn't tie me to a specific provider. I can use any provider I have credits for.
 
-<div style="display: flex; justify-content: left;">
+<div style="display: flex; justify-content: center;">
   <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680932/kilo_iveal4.png" alt="vscode" style="width: 80%;"/>
 </div>
 
@@ -58,7 +61,7 @@ I use the Neovim plugin for vim motions and because I'm a fan of [ThePrimeagen](
 
 [OpenCode](https://opencode.ai/) is a more recent addition, but I'm finding myself doing very well with it. There's a big overlap between KiloCode and this coding agent, but I often find myself using one or the other depending on the situation. A very useful feature of OpenCode is that it also uses the Language Server Protocol (LSP) to help the model interact with the code. As a terminal I use [Ghostty](https://ghostty.org/).
 
-<div style="display: flex; justify-content: left;">
+<div style="display: flex; justify-content: center;">
   <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680932/opencode_xpezg9.png" alt="opencode" style="width: 80%;"/>
 </div>
 
@@ -69,6 +72,7 @@ Finally, the best discovery I made this year was finding [OpenRouter](https://op
 Since we're at it, let's also talk about the underlying models. Which models do I use? All of them. Which is the best? It depends. The beautiful thing about having a provider like OpenRouter is that I'm not tied to one model or another, so I use the one I feel might perform better for that specific task. If I need to write code, I often use Grok Code. If I need to translate something or write text, I have a preference for Gemini models, and so on for all tasks. This approach of mine was also highlighted in [this article](https://openrouter.ai/state-of-ai)—very interesting from OpenRouter itself.
 
 I quote:
+
 > The "flight to quality" has not led to consolidation but to diversification.
 >
 > This pluralism suggests users are actively benchmarking across multiple open large models rather than converging on a single standard.
@@ -77,13 +81,14 @@ That said, I've done well with Z.Ai models like GLM 4.5 Air (now 4.7 has come ou
 
 This is my wrapped of the models I've used the most this year:
 
-<div style="display: flex; justify-content: left;">
+<div style="display: flex; justify-content: center;">
   <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1766680931/model_wrapped_hr2plw.png" alt="models" style="width: 80%;"/>
 </div>
 
 I practically never use Anthropic models because they're super expensive and not worth using. I found myself using Claude Sonnet as a last resort after cheaper models had failed, but it still didn't manage to turn the situation around, spending many credits uselessly.
 
 For models I always try to take a look at these sources to see if something new has come out:
+
 - [LM Arena](https://lmarena.ai/leaderboard/)
 - [OpenRouter rankings](https://openrouter.ai/rankings)
 - [Hacker News](https://news.ycombinator.com/news)
