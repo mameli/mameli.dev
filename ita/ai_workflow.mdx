@@ -1,0 +1,78 @@
+---
+title: "bla"
+description: ""
+pubDate: "2025-12-24"
+heroImage: "https://res.cloudinary.com/deoefumc4/image/upload/v1765932268/react_miqz4e.png"
+---
+
+![alt text](coding.jpg)
+
+import YouTubeVideo from '../../components/YouTubeVideo.astro';
+
+È la fine dell'anno e come al solito si fanno i resoconti della propria vita. Esce spotify wrapped (poco rilevante perché sono passato ad apple music), esce [letterboxd](https://letterboxd.com/) wrapped, la gente fa i reel con la collezione di tutti i viaggi etc etc
+Ci sono sicuramente molte cose più filosofiche su cui riflettere, ma in questo post voglio parlavi di come il **mio** approccio alla programmazione è cambiato durante questo anno.
+
+Non voglio fare la lezione di storia elencando passo passo l'evoluzione di questi strumenti nel corso degli anni perché semplicemente molti di questi tool hanno un aspettativa di vita molto bassa. Quindi è meglio focalizzarsi su cosa è rilevante adesso. Basti pensare a l'editor windsurf. Un anno fa sembrava potesse prendersi gran parte del mercato, ma era il solito hype generato dai content creator che cercano di esaltare la nuova tecnologia e farti sentire indietro rispetto all'industria. Nello [stack overflow survey 2025](https://survey.stackoverflow.co/2025/technology/#1-dev-id-es) uscito a fine luglio Windsurf aveva un adozione sotto il 5%. Su reddit la pagina di windsuft ha 12k visitatori settimanali (dato del 24/12) che a confronto con i 125k del sub di Cursor fanno capire che è diventato un tool di nicchia e non scommetterei sul suo futuro.
+
+Chatgpt è uscito a fine 2022 e sembra una vita fa ma fino al 2025 sono stato abbastanza testardo sull'uso dell'ai. Ne facevo un uso molto naive mettendo giusto lo stack trace dei bug su chatgpt per risolvere qualche errore e mi facevo aiutare per dei pezzetti di codice dall'autocomplete di Copilot che mi forniva l'azienda dove lavoravo. Niente di trascendentale e francamente usavo di più la chat per cercare ricette e organizzare viaggi.
+
+Da quando però questo tweet ha dato vita al movimento "vibe coding" sentivo sempre di più la sensazione che mi stavo perdendo qualcosa di grosso.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">There&#39;s a new kind of coding I call &quot;vibe coding&quot;, where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. It&#39;s possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good. Also I just talk to Composer with SuperWhisper…</p>&mdash; Andrej Karpathy (@karpathy) <a href="https://twitter.com/karpathy/status/1886192184808149383?ref_src=twsrc%5Etfw">February 2, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Da febbraio 2025 a luglio ho provato molti tool, ma nessuno mi ha convinto. Ho provato [Tabby](https://tabby.tabbyml.com/docs/administration/code-completion/), ma è stato un disatro. Non era lontanamente comparabile con copilot. Mi sono abbonato a chatgpt e sono andato avanti con l'integrazione del client desktop con vscode. Mi piaceva, ma era molto limitato. 
+
+![alt text](image.png)
+
+Ho provato cursor e mi è piaciuto molto, ma un abbonamento solo per scrivere mi scocciava farlo. Poi sono arrivato finalmente allo stack che sto utilizzando adesso.
+
+Disclamer gigante: Non sono uno avaro (spilorcio, braccino corto in ita ndr) nella vita di tutti i giorni, ma per l'uso dell'ai per qualche motivo sono estremamente attento alle spese.
+
+Lo stack è questo:
+Vscode
+Kilocode plugin
+NeoVim plugin
+Opencode
+Openrouter come provider
+
+Tutto qua.
+
+![alt text](image-1.png)
+
+Partiamo dall'editor di testo, Vscode **per me** è il migliore perché ho grande familiarità nel suo utilizzo ed è quello in cui sono più veloce.
+A vscode aggiungo il plugin [kilocode](https://kilo.ai/) che è integrato benissimo all'editor e soprattutto non mi lega ad un provider specifico. Posso usare qualsiasi provider io abbia crediti
+![alt text](image-2.png)
+
+Il plugin NeoVim lo uso solo per le vim motion.
+
+[Opencode](https://opencode.ai/) è un aggiunta più recente, ma mi sto trovando molto bene. C'è un grosso overlap tra kilo e questo coding agent, ma mi ritrovo spesso ad utilizzarne uno o l'altro a seconda delle situazioni. Una feature molto utile di Opencode è che utilizza anche i Language Server Protocol (LSP) per aiutare il modello ad interagire con il codice. Come terminale uso [Ghostty](https://ghostty.org/)
+
+![alt text](image-4.png)
+
+Infine la migliore scoperta che ho fatto questo anno è stata trovare [Openrouter](https://openrouter.ai/). In un ambiente così dinamico come l'ai, mi sono sempre sentito stretto a fare un abbonamento o aggiungere crediti a openai o anthropic o google. Con questo provider risolvo il problema perché posso utilizzare tutti i modelli che voglio e quelli più recenti vengono inseriti nel giro di alcuni giorni massimo. Sono felice di pagare il 5% in più per avere questa libertà di scelta. Tornando al diclamer poi aggiungo che posso usare i modelli opensource o in generale modelli anche molto efficienti. In questi ultimi mesi mi sono ritrovato spesso ad usare per esempio Grok Code Fast perché: 1 è veloce (duh?) 2 costa poco 3 lo trovo coinciso e diretto.
+
+Dato che ci siamo parliamo anche dei modelli alla base. Quali modelli utilizzo? tutti. Qual è il migliore? dipende. La cosa bella di avere un provider come Openrouter è che non sono legato ad un modello o ad un altro quindi utilizzo quello che sento possa performare meglio in quel determinato task. Se devo scrivere codice spesso utilizzo Grok Code, se devo tradurre qualcosa o scrivere del testo ho una preferenza verso i modelli Gemini e così per tutti i task. Questo mio modo di fare è stato evidenziato anche in [questo articolo](https://openrouter.ai/state-of-ai) molto interessante proprio di openrouter.
+
+Quoto:
+> The "flight to quality" has not led to consolidation but to diversification
+> 
+> This pluralism suggests users are actively benchmarking across multiple open large models rather than converging on a single standard.
+
+Detto questo mi sono trovato bene con i modelli di Z.Ai come GLM 4.5 Air (ora è uscito il 4.7 e voglio provarlo), Gemini nello specifico la versione 2.5 Flash e come già citato i modelli di X.ai come Grok code e Grok 4.x
+Questo è il mio wrapped dei modelli che ho utilizzato di più questo anno:
+
+![alt text](image-3.png)
+
+Non utilizzo praticamente mai i modelli di Anthropic perché sono super costosi e non vale la pena usarli. Mi sono ritrovato ad utilizzare Claude Sonnet come ultima spiaggia dopo che i modelli più cheap avevano fallito, ma non è riuscito comunque a ribaltare la situazione spendendo molti crediti inutilmente.
+
+Per i modelli cerco di dare sempre un occhiata a queste fonti per vedere se è uscito qualcosa:
+- [lmarena](https://lmarena.ai/leaderboard/)
+- [openrouter rankings](https://openrouter.ai/rankings)
+- [Hacker news](https://news.ycombinator.com/news)
+- [Theo Youtube channel](https://www.youtube.com/@t3dotgg) è un meme a questo punto
+
+## Why am i sticking with this ai coding stack?
+
+Perché utilizzo questi strumenti opensource che hanno tutti i loro difetti di integrazione? Perché non sono passato a una soluzione più completa Cursor nonostante credo che sia la scelta più semplice per chi vuole adottare l'ai nel suo coding? perché sono mesi che sono fuori dal ciclo di hype dei vari creator e non ho neache provato Antigravity? penso che in questo momento per me sia più importante imparare ad utilizzare questo stack al meglio invece di passare subito a qualcosa di nuovo. Sia in kilo che in opencode ho definito degli agenti custom via via che trovavo dei use case comuni (traduzione di test, editor per i post, debugger di codice) e solo utilizzando nel tempo questi tool ho potuto allargare l'ecosistema e ottimizzarne l'utilizzo. Se passo ogni volta al nuovo tool sono costretto a imparare di nuovo come usarlo e non voglio essere costantemente nella condizione di dovermi adattare. Ora mi sento confidente con questi strumenti che conosco bene e so come usarli ed estenderli e grazie a questa familiarità sto apprezzando sempre di più i risultati ottenuti che vanno poi di pari passo con l'evoluzione dei modelli stessi.
+
+Sicuramente cambierò idea in futuro perché usciranno soluzioni sempre migliori. Sto tenendo d'occhio per esempio [Zed](https://zed.dev/), ma ancora il coding agent mi convince poco. È un peccato perché il resto dell'editor mi piace molto. Nonostante non sia un fan dei modelli di Anthropic vorrei anche provare Claude code che di recente ha come feature l'utilizzo dei LSP. Chissà cosa ci riserverà il 2026. Ma come dice Battisti We will only find out by living ("Lo scopriremo solo vivendo")
