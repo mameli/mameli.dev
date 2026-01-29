@@ -4,52 +4,52 @@ description: 'A pragmatic workflow built around uv, ruff, ty, Marimo, and Polars
 pubDate: '2026-01-29'
 ---
 
-I put together a template repo for data projects in Python, but I wanted to add some context in this post. If you don’t care about the backstory, the repo is here: https://github.com/mameli/python_template. The template is meant to bootstrap Python projects and help you start on the right foot. More on that later.
+I put together a template repo for data projects in Python, and I wanted to add some context to go with it. If you don’t care about the backstory, here’s the repo: https://github.com/mameli/python_template. It’s meant to bootstrap Python projects and help you start on the right foot.
 
 For the curious, here comes the long digression…
 
 Anyone who has worked with Python has run into dependency management, virtual environments, and Python version juggling.
 In the developer community, the famous XKCD comic captures how messy this can get.
-Today, though, I think that comic is starting to feel outdated—if you use the modern tools we have available.
+Today, though, I think that comic is starting to feel outdated—at least if you use the modern tools we have now.
 
 The tools I’m talking about are:
-- ⚡ uv - Lightning-fast package manager
-- ✨ ruff - Ultra-fast linter and formatter
-- 🛡️ ty - Modern type checker
-- 📚 Marimo - Reactive notebooks
-- 🐻‍❄️ Polars – data analysis and exploration
+- ⚡ [uv](https://docs.astral.sh/uv/) - Lightning-fast package manager
+- ✨ [ruff](https://docs.astral.sh/ruff/) - Ultra-fast linter and formatter
+- 🛡️ [ty](https://docs.astral.sh/ty/) - Modern type checker
+- 📚 [Marimo](https://marimo.io/) - Reactive notebooks
+- 🐻‍❄️ [Polars](https://pola.rs/) - Data analysis and exploration
 
 And then there are a few DevOps-oriented tools that make the developer experience even better:
-- MkDocs + GitLab/Github Pages – Easy to maintain documentation
-- Docker - Containerization
-- Commitizen - Conventional commits
+- [MkDocs](https://www.mkdocs.org/) + GitLab/GitHub Pages – Easy-to-maintain documentation
+- [Docker](https://www.docker.com/) - Containerization
+- [Commitizen](https://commitizen-tools.github.io/commitizen/) - Conventional commits
 
 ## The Problem with “Old” Python
 
-Over the years, Python’s popularity has skyrocketed: it spread across basically every industry and became one of the most widely used languages in academia as well, thanks to how approachable it is. Paradoxically, the tooling around it didn’t mature at the same pace.
+Over the years, Python’s popularity has skyrocketed: it spread across nearly every industry and became one of the most widely used languages in academia, thanks to how approachable it is. Paradoxically, the tooling around it didn’t mature at the same pace.
 
-For example, Anaconda improved the developer experience, but it didn’t really revolutionize the ecosystem—it mostly got added to the existing tangle of `pip` and friends. Traditional package managers can be slow, dependency management often stayed fairly simplistic, and virtual environments were never consistently “obvious”, despite being necessary to avoid polluting the system Python with project dependencies.
+For example, Anaconda improved the developer experience, but it didn’t really revolutionize the ecosystem—it mostly got added to the existing tangle of `pip` and friends. Traditional package managers were slow, dependency management often stayed fairly simplistic, and virtual environments were never consistently “obvious”, despite being necessary to avoid polluting the system Python with project dependencies.
 
 And then there’s the version problem: 3, 4, N Python installations (system Python, Homebrew’s Python, Conda’s Python…), with confusion that sometimes feels inevitable.
 
 Finally, Jupyter notebooks: I used them way too much at university. I still like them for data exploration and experiments, but they also have issues that can be hard to ignore—like poor reproducibility and “phantom bugs” caused by hidden state and badly managed global variables.
 
-There were many problems, but affection (and habit) never made me abandon the language. Still, Python needed development tools worthy of its popularity.
+There were many problems, but affection (and habit) kept me from abandoning the language. Still, Python needed development tools worthy of its popularity.
 
-<div style="display: flex; justify-content: center;">
-  <img src="/images/python-deps.png" alt="vscode" style="width: 50%;"/>
-</div>
+<!-- <div style="display: flex; justify-content: center;">
+  <img src="/images/python-deps.png" alt="Python dependency management chaos" style="width: 50%;"/>
+</div> -->
 
 ## The Astral Ecosystem
 
-A large portion of the tools I can’t live without today are being built by a single company: Astral. Founded by Charlie Marsh, their mission is to improve Python developer tooling. Their flagship products are:
+A large portion of the tools I can’t live without today are being built by a single company: [Astral](https://astral.sh/). Founded by [Charlie Marsh](https://crmarsh.com/), its mission is to improve Python developer tooling. Its flagship products are:
 
 - **uv**: a fast package manager and project management tool, meant to replace `pip` + `virtualenv` with a simpler, faster workflow.
 - **ruff**: an ultra-fast linter and formatter, compatible with many flake8/isort/black rules in a single tool.
 - **ty**: a modern type checker, focused on speed and immediate feedback during development.
 - **pyx**: Astral’s Python-native registry (backend for uv) that speeds up installs and package management.
 
-`pyx` is still a work in progress, but the other three are ready to use in production (for `ty` I’d personally wait a bit longer—but not by much, based on what they announced in their [blog post](https://astral.sh/blog/ty)).
+`pyx` is still a work in progress, but the other three are ready for production use. For `ty`, I’d personally wait a bit longer—but not by much, based on what Astral announced in their [blog](https://astral.sh/blog/ty).
 
 ### uv
 
@@ -100,7 +100,7 @@ Astral isn’t the only player in this list of modern tools (thankfully—more i
 
 ### Marimo
 
-Marimo is the notebook that finally made me abandon Jupyter. I never thought it would happen: I’ve used Jupyter Notebook since university. Then I tried Marimo and I had no doubts. The key idea is that it’s a *reactive* notebook: execution is driven by code dependencies, so it’s deterministic and reproducible (no hidden state, no “run all cells” to make things line up). And most importantly: the notebook is a Python file, so it versions cleanly, re-runs like a script, and can be reused as a module.
+Marimo is the notebook that finally made me abandon Jupyter. I never thought it would happen: I’ve used Jupyter Notebook since university. Then I tried Marimo, and I had no doubts. The key idea is that it’s a *reactive* notebook: execution is driven by code dependencies, so it’s deterministic and reproducible (no hidden state, no “run all cells” to make things line up). And most importantly: the notebook is a Python file, so it versions cleanly, re-runs like a script, and can be reused as a module.
 
 What convinced me:
 - **Deterministic, reproducible execution:** no hidden state, and goodbye “run all cells” nightmares.
@@ -125,10 +125,10 @@ What I like most:
 
 ## DevOps Tools
 
-I’ll close with three “DevOps” (and adjacent) tools that don’t need much of an introduction: **MkDocs** (paired with GitLab/GitHub Pages) and **Docker**. The first helps you keep static documentation versioned in your repo and publish it easily; the second is still the standard for containerizing and making environments and pipelines reproducible. **Commitizen** deserves two lines: it guides you to write commits following the Conventional Commits standard (e.g. `feat`, `fix`) and can automate version bumps and changelog generation from history (`cz commit`, `cz bump`).
+I’ll close with three “DevOps” (and adjacent) tools that don’t need much of an introduction: **MkDocs** (paired with GitLab/GitHub Pages), **Docker**, and **Commitizen**. The first helps you keep static documentation versioned in your repo and publish it easily; the second is still the standard for containerizing and making environments and pipelines reproducible. **Commitizen** deserves two lines: it guides you to write commits following the Conventional Commits standard (e.g. `feat`, `fix`) and can automate version bumps and changelog generation from history (`cz commit`, `cz bump`).
 
 ## Conclusion
 
 If you want to go from theory to practice, the template repo already includes all of these tools ready to try: sensible defaults, commands wired up, and a setup that lets you explore `uv`, `ruff`, `ty`, Marimo, Polars, and the DevOps extras.
 
-The nice thing is that, for once, we’re not talking about “fixing” Python—we’re talking about finally giving it tooling worthy of what it has become. Seeing tools like `uv`, `ruff` (and soon `ty`) raise the bar this much—fast, polished, with UX closer to younger languages—makes it much easier to keep choosing Python without feeling at a disadvantage compared to TypeScript and, more broadly, compared to modern toolchains. If this is the direction—simple tools, extremely fast, with immediate feedback—I’m genuinely optimistic: Python deserves the best tools, and today it looks like it’s finally getting them.
+The nice thing is that, for once, we’re not talking about “fixing” Python—we’re talking about finally giving it tooling worthy of what it has become. Seeing tools like `uv`, `ruff` (and soon `ty`) raise the bar—fast, polished, with UX closer to younger languages—makes it easier to keep choosing Python without feeling at a disadvantage compared to TypeScript, and modern toolchains in general. If this is the direction—simple tools, extremely fast, with immediate feedback—I’m genuinely optimistic. Python deserves the best tools, and today it looks like it’s finally getting them.
