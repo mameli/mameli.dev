@@ -4,13 +4,17 @@ description: 'A pragmatic workflow built around uv, ruff, ty, Marimo, and Polars
 pubDate: '2026-01-29'
 ---
 
-I put together a template repo for data projects in Python, and I wanted to add some context to go with it. If you don’t care about the backstory, here’s the repo: https://github.com/mameli/python_template. It’s meant to bootstrap Python projects and help you start on the right foot.
+I put together a template repo for data projects in Python, and I wanted to add some context to go with it. If you don’t care about the backstory, here’s the [repo](https://github.com/mameli/python_template). It’s meant to bootstrap Python projects and help you start on the right foot.
 
 For the curious, here comes the long digression…
 
 Anyone who has worked with Python has run into dependency management, virtual environments, and Python version juggling.
 In the developer community, the famous XKCD comic captures how messy this can get.
 Today, though, I think that comic is starting to feel outdated—at least if you use the modern tools we have now.
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://imgs.xkcd.com/comics/python_environment.png" alt="Python dependency management chaos" style="width: 50%;"/>
+</div>
 
 The tools I’m talking about are:
 - ⚡ [uv](https://docs.astral.sh/uv/) - Lightning-fast package manager
@@ -36,9 +40,9 @@ Finally, Jupyter notebooks: I used them way too much at university. I still like
 
 There were many problems, but affection (and habit) kept me from abandoning the language. Still, Python needed development tools worthy of its popularity.
 
-<!-- <div style="display: flex; justify-content: center;">
-  <img src="/images/python-deps.png" alt="Python dependency management chaos" style="width: 50%;"/>
-</div> -->
+<div style="display: flex; justify-content: center;">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1770029292/top_programming_lang_vfmppa.jpg" alt="Python popularity chart" style="width: 60%;"/>
+</div>
 
 ## The Astral Ecosystem
 
@@ -50,6 +54,10 @@ A large portion of the tools I can’t live without today are being built by a s
 - **pyx**: Astral’s Python-native registry (backend for uv) that speeds up installs and package management.
 
 `pyx` is still a work in progress, but the other three are ready for production use. For `ty`, I’d personally wait a bit longer—but not by much, based on what Astral announced in their [blog](https://astral.sh/blog/ty).
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1770029924/astral_nnvvyd.png" alt="Astral logo" style="width: 90%;"/>
+</div>
 
 ### uv
 
@@ -112,6 +120,11 @@ Quick start (with `uv`):
 - `uv add marimo`
 - `uv run marimo edit notebook.py`
 
+<div style="display: flex; justify-content: center;">
+  <img src="https://cms.marimo.io/gallery/seam-carving.gif" alt="Marimo interactivity" style="width: 90%;"/>
+</div>
+
+
 ### Polars
 
 I’ve already covered this in detail in [this article](/blog/transitioning-from-pandas-to-polars/), so I’ll go straight to the point: if today I need to do data wrangling and analysis on a single machine, Polars is almost always my first choice. It’s a DataFrame library with a Rust engine and a “query engine” mindset: it uses lazy execution when needed, optimizes the plan (filter/projection pushdown, etc.), uses all your cores well, and plays nicely with modern formats like Parquet/Arrow.
@@ -122,6 +135,10 @@ What I like most:
 - **Composable expression API:** readable, fast transformations without falling back to `.apply` + lambdas that kill performance.
 - **Arrow-first:** solid interoperability with the ecosystem (PyArrow/Parquet/IPC) and easy integration with tools like DuckDB when you want to mix SQL and DataFrames.
 - **Performance without complexity:** parallelism by default and excellent local performance, often without introducing distributed frameworks.
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://res.cloudinary.com/deoefumc4/image/upload/v1770030363/polars_sq5neo.svg" alt="Polars logo" style="width: 90%;"/>
+</div>
 
 ## DevOps Tools
 
