@@ -2,6 +2,7 @@
 title: 'A Modern Python Stack for Data Projects'
 description: 'uv, ruff, ty, Marimo, Polars'
 pubDate: '2026-01-29'
+heroImage: 'https://res.cloudinary.com/deoefumc4/image/upload/v1770230710/artturi-jalli-g5_rxRjvKmg-unsplash_y1meu1.jpg'
 ---
 
 I put together a template repo for data projects in Python, and I wanted to add some context to go with it. If you don’t care about the backstory, here’s the [repo](https://github.com/mameli/python_template). It’s meant to bootstrap Python projects and help you start on the right foot.
