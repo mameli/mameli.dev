@@ -1,6 +1,6 @@
 ---
 title: 'A Modern Python Stack for Data Projects'
-description: 'A pragmatic workflow built around uv, ruff, ty, Marimo, and Polars.'
+description: 'uv, ruff, ty, Marimo, Polars'
 pubDate: '2026-01-29'
 ---
 

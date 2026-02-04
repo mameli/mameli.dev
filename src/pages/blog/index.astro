@@ -22,13 +22,15 @@ const posts = (await getCollection('blog')).sort(
                 href={`/blog/${post.id}/`}
               >
                 {post.data.title}
-              </a>
-              <span class="text-lg text-gray-800 dark:text-white">
-                : {post.data.description}
-              </span>
-            </li>
-          ))
-        }
+	              </a>
+	              {post.data.description !== '' && (
+	                <span class="text-lg text-gray-800 dark:text-white">
+	                  : {post.data.description}
+	                </span>
+	              )}
+	            </li>
+	          ))
+	        }
       </ul>
     </div>
   </div>
