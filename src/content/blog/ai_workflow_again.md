@@ -5,7 +5,7 @@ pubDate: '2026-02-13'
 heroImage: 'https://res.cloudinary.com/deoefumc4/image/upload/v1770933565/hero_iuoxax.jpg'
 ---
 
-My 2026 AI workflow article aged like fresh milk. It's incredibly difficult to stay updated on all the new releases in this field, but that's also what drives me to follow these evolutions as closely as possible. For me, we're in the Renaissance of coding.
+My 2026 AI workflow [article](https://www.mameli.dev/blog/ai_workflow_eng/) aged like fresh milk. It's incredibly difficult to stay updated on all the new releases in this field, but that's also what drives me to follow these evolutions as closely as possible. For me, we're in the Renaissance of coding.
 
 In these past two months, I've continued exploring these tools, and my working environment has changed substantially since I wrote the last article.
 So I wanted to give an update on my development environment and various odds and ends.
