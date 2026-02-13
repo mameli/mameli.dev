@@ -8,7 +8,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout title="Blog">
-  <div class="flex flex-col items-center justify-center min-h-screen">
+  <div class="flex flex-col items-center justify-center min-h-screen pt-20 sm:pt-8">
     <div class="text-left">
       <h1 class="text-2xl text-gray-800 dark:text-white font-bold mb-2">
         <a href="/">Mameli.Dev</a>
@@ -16,7 +16,7 @@ const posts = (await getCollection('blog')).sort(
       <ul class="list-none text-left">
         {
           posts.map((post) => (
-            <li class="mb-1.5">
+            <li class="mb-2">
               <a
                 class="text-xl font-extrabold text-gray-800 hover:underline underline-offset-7 decoration-wavy decoration-green-500 dark:decoration-green-400 dark:text-white"
                 href={`/blog/${post.id}/`}
