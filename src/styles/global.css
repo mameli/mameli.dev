@@ -7,11 +7,11 @@
   src: url('/fonts/EBGaramond-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 :root {
-  --font-family: 'EBGaramond', sans-serif;
+  --font-family: 'EBGaramond', Georgia, 'Times New Roman', serif;
 }
 
 body {

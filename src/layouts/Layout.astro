@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 import BaseHead from '../components/BaseHead.astro';
 import Analytics from '@vercel/analytics/astro'
 
@@ -8,16 +7,17 @@ interface Props {
 }
 
 const { title = 'Mameli.Dev' } = Astro.props;
+const isVercelBuild = process.env.VERCEL === '1';
 ---
 
 <html lang="en">
   <head>
 		<BaseHead title={title} description="Mameli.Dev blog" />
-    <Analytics/>
+    {isVercelBuild && <Analytics />}
 	</head>
   <body>
-    <div class="container mx-auto max-w-full dark:dark:bg-neutral-900 bg-amber-50 flex flex-col min-h-screen justify-between">
-      <main class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pb-2 bg-amber-50 dark:dark:bg-neutral-900 grow">
+    <div class="container mx-auto max-w-full dark:bg-neutral-900 bg-amber-50 flex flex-col min-h-screen justify-between">
+      <main class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pb-2 bg-amber-50 dark:bg-neutral-900 grow">
         <slot />
       </main>
     </div>

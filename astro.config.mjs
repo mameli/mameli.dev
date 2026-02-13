@@ -13,6 +13,9 @@ import { SITE } from "./src/consts.ts";
 // https://astro.build/config
 export default defineConfig({
     site: SITE,
+    build: {
+        inlineStylesheets: 'always',
+    },
     integrations: [mdx(), sitemap(), AstroPWA({
         mode: 'development',
         base: '/',
