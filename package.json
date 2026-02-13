@@ -16,9 +16,13 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "subset:fonts": "bun scripts/subset-fonts.mjs",
+    "build": "bun run subset:fonts && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "subset-font": "^2.4.0"
+  }
 }
