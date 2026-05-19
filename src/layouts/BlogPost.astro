@@ -22,9 +22,9 @@ const { title, description, pubDate, author, heroImage } = Astro.props
       class="container mx-auto max-w-full dark:dark:bg-neutral-900 bg-amber-50 flex flex-col min-h-screen justify-between"
     >
       <main
-        class="max-w-5xl mx-auto px-2 sm:px-10 lg:px-14 xl:px-20 2xl:px-28 pb-2 bg-amber-50 dark:dark:bg-neutral-900 grow"
+        class="w-full min-w-0 max-w-5xl mx-auto px-2 sm:px-10 lg:px-14 xl:px-20 2xl:px-28 pb-2 bg-amber-50 dark:dark:bg-neutral-900 grow"
       >
-        <article>
+        <article class="min-w-0">
           <div class="header-section mb-8 mt-8">
             <h1 class="text-3xl font-bold mb-2 text-gray-800 dark:text-white">
               {title}
@@ -40,7 +40,7 @@ const { title, description, pubDate, author, heroImage } = Astro.props
             </div>
           </div>
           <div
-            class="prose dark:prose-invert max-w-full text-gray-800 dark:text-white prose-h1:text-4xl prose-p:text-xl prose-li:text-xl prose-blockquote:text-sm prose-a:text-green-800 prose-a:dark:text-green-200 prose-code:text-base prose-code:before:hidden prose-code:after:hidden mb-8"
+            class="prose dark:prose-invert w-full min-w-0 max-w-full text-gray-800 dark:text-white prose-h1:text-4xl prose-p:text-xl prose-li:text-xl prose-blockquote:text-sm prose-a:text-green-800 prose-a:dark:text-green-200 prose-code:text-base prose-code:before:hidden prose-code:after:hidden prose-img:max-w-full prose-img:h-auto prose-pre:overflow-x-auto mb-8"
           >
             <slot />
           </div>
