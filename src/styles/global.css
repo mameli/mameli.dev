@@ -261,19 +261,12 @@ body {
   align-items: start;
 }
 
-.article-homework-card {
-  position: relative;
-  padding-top: 3.8rem;
-}
-
 .article-homework-card__number {
-  position: absolute;
-  top: 1.15rem;
-  left: 1.25rem;
   display: grid;
   width: 2rem;
   height: 2rem;
   place-items: center;
+  margin-bottom: 0.6rem;
   border-radius: 9999px;
   color: white;
   background: rgb(22 101 52);
