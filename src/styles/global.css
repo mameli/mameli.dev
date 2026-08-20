@@ -18,7 +18,337 @@ body {
   font-family: var(--font-family);
 }
 
+.article-illustration {
+  margin: 2rem 0;
+  overflow: hidden;
+  border: 1px solid rgb(22 101 52 / 20%);
+  border-radius: 0.85rem;
+  background: rgb(255 255 255 / 40%);
+  box-shadow: 0 12px 30px rgb(120 88 35 / 9%);
+}
+
+.article-illustration--hero {
+  margin: 2.25rem 0 2.5rem;
+}
+
+.article-illustration.article-illustration--frameless {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.article-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.article-diagram {
+  background: rgb(251 246 233);
+}
+
+.article-diagram a {
+  display: block;
+  cursor: zoom-in;
+}
+
+.article-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.article-card {
+  padding: 1.25rem;
+  border: 1px solid rgb(22 101 52 / 22%);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 45%);
+  box-shadow: 0 8px 24px rgb(120 88 35 / 7%);
+}
+
+.article-card h3 {
+  margin: 0 0 0.45rem;
+  color: rgb(22 101 52);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.article-card p,
+.article-card li {
+  margin: 0;
+  color: rgb(31 41 55);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.article-card p + p {
+  margin-top: 0.75rem;
+}
+
+.article-card ol,
+.article-card ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.article-card ol {
+  list-style: decimal;
+}
+
+.article-card ul {
+  list-style: disc;
+}
+
+.article-card li + li {
+  margin-top: 0.4rem;
+}
+
+.article-card a {
+  color: rgb(22 101 52);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.article-card code,
+.article-rule code {
+  padding: 0.08em 0.3em;
+  border-radius: 0.25rem;
+  background: rgb(22 101 52 / 10%);
+  font-size: 0.88em;
+}
+
+.article-terminal {
+  margin: 2rem 0;
+  overflow: hidden;
+  border: 1px solid rgb(75 85 99);
+  border-radius: 0.75rem;
+  background: rgb(17 24 39);
+  box-shadow: 0 16px 36px rgb(17 24 39 / 18%);
+}
+
+.article-terminal__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgb(75 85 99);
+  background: rgb(31 41 55);
+}
+
+.article-terminal__dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 9999px;
+}
+
+.article-terminal__dot--red {
+  background: rgb(248 113 113);
+}
+
+.article-terminal__dot--yellow {
+  background: rgb(250 204 21);
+}
+
+.article-terminal__dot--green {
+  background: rgb(74 222 128);
+}
+
+.article-terminal__title {
+  margin-left: 0.35rem;
+  color: rgb(209 213 219);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+}
+
+.article-terminal pre {
+  margin: 0;
+  padding: 1.2rem;
+  overflow-x: auto;
+  color: rgb(229 231 235);
+  background: transparent;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.article-terminal code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.article-terminal__user {
+  color: rgb(147 197 253);
+}
+
+.article-terminal__model {
+  color: rgb(134 239 172);
+}
+
+.article-terminal__tool {
+  color: rgb(253 224 71);
+}
+
+.article-table {
+  margin: 2rem 0;
+  overflow-x: auto;
+  border: 1px solid rgb(22 101 52 / 22%);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgb(120 88 35 / 7%);
+}
+
+.article-table table {
+  width: 100%;
+  min-width: 42rem;
+  margin: 0;
+  border-collapse: collapse;
+  background: rgb(255 255 255 / 45%);
+}
+
+.article-table th,
+.article-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgb(22 101 52 / 15%);
+  border-left: 1px solid rgb(22 101 52 / 12%);
+  color: rgb(31 41 55);
+  font-size: 1rem;
+  line-height: 1.45;
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-table th {
+  color: rgb(20 83 45);
+  background: rgb(22 101 52 / 9%);
+  font-weight: 700;
+}
+
+.article-table th:first-child,
+.article-table td:first-child {
+  border-left: 0;
+}
+
+.article-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.article-rule {
+  margin: 2rem 0;
+  padding: 1.25rem 1.4rem;
+  border-left: 0.3rem solid rgb(22 101 52);
+  border-radius: 0 0.75rem 0.75rem 0;
+  background: rgb(22 101 52 / 9%);
+}
+
+.article-rule__label {
+  margin: 0 0 0.35rem;
+  color: rgb(22 101 52);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.article-rule p:last-child {
+  margin: 0;
+  color: rgb(31 41 55);
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.article-homework-grid {
+  align-items: start;
+}
+
+.article-homework-card {
+  position: relative;
+  padding-top: 3.8rem;
+}
+
+.article-homework-card__number {
+  position: absolute;
+  top: 1.15rem;
+  left: 1.25rem;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 9999px;
+  color: white;
+  background: rgb(22 101 52);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+@media (max-width: 639px) {
+  .article-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-card {
+    padding: 1.1rem;
+  }
+
+  .article-terminal pre {
+    padding: 1rem;
+    font-size: 0.82rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
+  .article-illustration {
+    border-color: rgb(74 222 128 / 20%);
+    background: rgb(255 255 255 / 4%);
+    box-shadow: none;
+  }
+
+  .article-card,
+  .article-table table {
+    border-color: rgb(74 222 128 / 22%);
+    background: rgb(255 255 255 / 4%);
+    box-shadow: none;
+  }
+
+  .article-card h3,
+  .article-card a,
+  .article-rule__label {
+    color: rgb(187 247 208);
+  }
+
+  .article-card p,
+  .article-card li,
+  .article-table th,
+  .article-table td,
+  .article-rule p:last-child {
+    color: rgb(229 231 235);
+  }
+
+  .article-card code,
+  .article-rule code {
+    background: rgb(74 222 128 / 12%);
+  }
+
+  .article-table {
+    border-color: rgb(74 222 128 / 22%);
+    box-shadow: none;
+  }
+
+  .article-table th {
+    color: rgb(187 247 208);
+    background: rgb(74 222 128 / 10%);
+  }
+
+  .article-table th,
+  .article-table td {
+    border-color: rgb(74 222 128 / 15%);
+  }
+
+  .article-rule {
+    border-color: rgb(74 222 128);
+    background: rgb(74 222 128 / 10%);
+  }
+
   .astro-code,
   .astro-code span {
     color: var(--shiki-dark) !important;
