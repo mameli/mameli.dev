@@ -2,17 +2,18 @@
   "name": "mameli-dev",
   "version": "0.0.1",
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/rss": "^4.0.15",
-    "@astrojs/sitemap": "^3.7.0",
-    "@astrojs/vercel": "^9.0.4",
+    "@astrojs/mdx": "8.0.0",
+    "@astrojs/rss": "4.0.19",
+    "@astrojs/sitemap": "3.7.4",
+    "@astrojs/vercel": "11.0.9",
+    "@tailwindcss/node": "^4.3.3",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.3.3",
     "@vercel/analytics": "^1.6.1",
     "@vite-pwa/astro": "^1.2.0",
-    "astro": "^5.17.1",
+    "astro": "7.2.10",
     "sharp": "^0.34.3",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.3.3"
   },
   "scripts": {
     "dev": "astro dev",

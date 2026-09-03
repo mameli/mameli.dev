@@ -73,7 +73,7 @@ kafka_source.runWith(Producer.plainSink(producerSettings))
 ```
 
 The `application.conf` file provides the configuration for the Akka Kafka producer:
-```conf
+```properties
 akka.kafka.producer {
   discovery-method = akka.discovery
 

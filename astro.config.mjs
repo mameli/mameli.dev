@@ -13,6 +13,7 @@ import { SITE } from "./src/consts.ts";
 // https://astro.build/config
 export default defineConfig({
     site: SITE,
+    compressHTML: false,
     build: {
         inlineStylesheets: 'always',
     },

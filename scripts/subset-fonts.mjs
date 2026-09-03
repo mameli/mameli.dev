@@ -3,8 +3,10 @@ import path from 'node:path';
 import subsetFont from 'subset-font';
 
 const PROJECT_ROOT = process.cwd();
-const SOURCE_FONT = path.join(PROJECT_ROOT, 'fonts-source/EBGaramond-Regular.full.woff2');
-const OUTPUT_FONT = path.join(PROJECT_ROOT, 'public/fonts/EBGaramond-Regular.woff2');
+const FONTS = [
+  { source: 'fonts-source/EBGaramond-Regular.full.woff2', output: 'public/fonts/EBGaramond-Regular.woff2' },
+  { source: 'fonts-source/EBGaramond-SemiBold.full.woff2', output: 'public/fonts/EBGaramond-SemiBold.woff2' },
+];
 
 const SCAN_ROOTS = [path.join(PROJECT_ROOT, 'src')];
 const INCLUDE_EXTENSIONS = new Set([
@@ -68,22 +70,27 @@ async function collectSubsetCharacters() {
 
 async function run() {
   try {
-    const [sourceBuffer, sourceStats, subsetCharacters] = await Promise.all([
-      fs.readFile(SOURCE_FONT),
-      fs.stat(SOURCE_FONT),
-      collectSubsetCharacters(),
-    ]);
+    const subsetCharacters = await collectSubsetCharacters();
 
-    const subsetBuffer = await subsetFont(sourceBuffer, subsetCharacters, { targetFormat: 'woff2' });
+    for (const font of FONTS) {
+      const sourcePath = path.join(PROJECT_ROOT, font.source);
+      const outputPath = path.join(PROJECT_ROOT, font.output);
+      const [sourceBuffer, sourceStats] = await Promise.all([
+        fs.readFile(sourcePath),
+        fs.stat(sourcePath),
+      ]);
 
-    await fs.writeFile(OUTPUT_FONT, subsetBuffer);
+      const subsetBuffer = await subsetFont(sourceBuffer, subsetCharacters, { targetFormat: 'woff2' });
 
-    const subsetStats = await fs.stat(OUTPUT_FONT);
-    const reduction = (((sourceStats.size - subsetStats.size) / sourceStats.size) * 100).toFixed(1);
+      await fs.writeFile(outputPath, subsetBuffer);
 
-    console.log(`Font subset created: ${path.relative(PROJECT_ROOT, OUTPUT_FONT)}`);
-    console.log(`Characters included: ${subsetCharacters.length}`);
-    console.log(`Size: ${sourceStats.size} -> ${subsetStats.size} bytes (${reduction}% smaller)`);
+      const subsetStats = await fs.stat(outputPath);
+      const reduction = (((sourceStats.size - subsetStats.size) / sourceStats.size) * 100).toFixed(1);
+
+      console.log(`Font subset created: ${path.relative(PROJECT_ROOT, outputPath)}`);
+      console.log(`Characters included: ${subsetCharacters.length}`);
+      console.log(`Size: ${sourceStats.size} -> ${subsetStats.size} bytes (${reduction}% smaller)`);
+    }
   } catch (error) {
     console.error('Failed to generate font subset.');
     console.error(error);
