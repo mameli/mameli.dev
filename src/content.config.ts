@@ -10,6 +10,7 @@ const blog = defineCollection({
 			pubDate: z.coerce.date(),
 			author: z.string().default('Mameli'),
 			heroImage: image().optional(),
+			lang: z.enum(['en', 'it']).default('en'),
 		}),
 });
 
