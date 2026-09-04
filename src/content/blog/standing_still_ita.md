@@ -1,6 +1,6 @@
 ---
 title: 'Un Paese fermo'
-description: "L'Italia resta ferma mentre l'AI cambia il modo in cui lavoriamo. Appunti di uno che usa questi strumenti ogni giorno, non di un CEO di startup."
+description: "L'Italia resta ferma mentre l'AI cambia il modo in cui lavoriamo."
 pubDate: '2026-09-04'
 heroImage: 'https://res.cloudinary.com/deoefumc4/image/upload/v1788538998/hero__r23w2j.webp'
 lang: 'it'

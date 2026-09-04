@@ -1,6 +1,6 @@
 ---
 title: 'A Country Standing Still'
-description: "Italy keeps standing still while AI changes how the world works. Notes from someone who uses these tools every day, not a startup CEO."
+description: "Italy keeps standing still while AI changes how the world works."
 pubDate: '2026-09-04'
 heroImage: 'https://res.cloudinary.com/deoefumc4/image/upload/v1788538998/hero__r23w2j.webp'
 lang: 'en'
